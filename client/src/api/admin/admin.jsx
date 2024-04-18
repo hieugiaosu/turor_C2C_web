@@ -45,9 +45,24 @@ const rawMessageData = {
                     "isSent": true
                 },
                 {
-                    "content": "Hello",
+                    "content": "Do you have the report?",
                     "timestamp": "2021-07-01T14:01:00Z",
                     "isSent": true
+                },
+                {
+                    "content": "Yes, I do.",
+                    "timestamp": "2021-07-01T14:02:00Z",
+                    "isSent": false
+                },
+                {
+                    "content": "Great! Can you send it to me?",
+                    "timestamp": "2021-07-01T14:03:00Z",
+                    "isSent": true
+                },
+                {
+                    "content": "Sure, I'll send it right away.",
+                    "timestamp": "2021-07-01T14:04:00Z",
+                    "isSent": false
                 }
             ]
         },
@@ -66,6 +81,26 @@ const rawMessageData = {
                     "content": "Hello",
                     "timestamp": "2021-07-01T16:01:00Z",
                     "isSent": true
+                },
+                {
+                    "content": "Can you help me with this task?",
+                    "timestamp": "2021-07-01T16:02:00Z",
+                    "isSent": false
+                },
+                {
+                    "content": "Sure, what do you need help with?",
+                    "timestamp": "2021-07-01T16:03:00Z",
+                    "isSent": true
+                },
+                {
+                    "content": "I need help with the presentation.",
+                    "timestamp": "2021-07-01T16:04:00Z",
+                    "isSent": false
+                },
+                {
+                    "content": "I can help you with that. Let me know when you’re ready.",
+                    "timestamp": "2021-07-01T16:05:00Z",
+                    "isSent": true,
                 }
             ]
         },
@@ -76,14 +111,19 @@ const rawMessageData = {
             "isActive": false,
             "messages": [
                 {
-                    "content": "Hi!",
+                    "content": "I will be late for the meeting.",
                     "timestamp": "2021-07-01T18:00:00Z",
                     "isSent": false
                 },
                 {
-                    "content": "Hello",
+                    "content": "No problem. Take your time.",
                     "timestamp": "2021-07-01T18:01:00Z",
                     "isSent": true
+                },
+                {
+                    "content": "Thank you for understanding.",
+                    "timestamp": "2021-07-01T18:02:00Z",
+                    "isSent": false
                 }
             ]
         },
@@ -94,14 +134,19 @@ const rawMessageData = {
             "isActive": true,
             "messages": [
                 {
-                    "content": "Hey!",
+                    "content": "I will get the report to you by tomorrow.",
                     "timestamp": "2021-07-01T20:00:00Z",
                     "isSent": true
                 },
                 {
-                    "content": "Hello",
+                    "content": "Thank you for the update.",
                     "timestamp": "2021-07-01T20:01:00Z",
                     "isSent": false
+                },
+                {
+                    "content": "You're welcome.",
+                    "timestamp": "2021-07-01T20:02:00Z",
+                    "isSent": true
                 }
             ]
         }

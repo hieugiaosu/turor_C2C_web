@@ -5,8 +5,10 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color:chocolate;
+    background-color:#F5F7FA;
     margin-top: 100px; /*Margin with header --> adjust it when u have header*/
+    margin-left: 250px;
+    width: calc(100% - 250px);
 }
 
 /* .login {
