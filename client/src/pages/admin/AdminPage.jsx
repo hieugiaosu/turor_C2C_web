@@ -1,12 +1,14 @@
-import { Outlet } from 'react-router-dom'
-import AdminNavigator from '../../components/admin/navigators/Navigator'
+import { Outlet } from "react-router-dom";
+import AdminNavigator from "../../components/admin/navigators/Navigator";
 
 function AdminPage() {
-    return (
-        <>
+  return (
+    <>
+      <div className="row">
         <AdminNavigator></AdminNavigator>
         <Outlet></Outlet>
-        </>
-    )
+      </div>
+    </>
+  );
 }
-export default AdminPage
+export default AdminPage;
