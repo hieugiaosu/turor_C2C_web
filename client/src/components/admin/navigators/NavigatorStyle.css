@@ -1,0 +1,16 @@
+.admin-navigator {
+  background-color: #1d2026;
+  color: white;
+}
+.logo {
+  color: #ff6636;
+}
+.material-symbols-outlined {
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+.selected {
+  color: #ff6636;
+}
