@@ -10,14 +10,14 @@ function AdminNavigator() {
   return (
     <>
       <div className="col-2 m-0 vh-100 admin-navigator">
-        <div className="row justify-content-center align-items-center fw-bold py-3">
+        <div className="row justify-content-center align-items-center fw-bold py-3 me-0">
           <span className="material-symbols-outlined logo me-2">school</span>{" "}
           BK-TUTOR
         </div>
         <Link
           to={""}
           className={
-            "row ms-2 ps-2 mt-5 mb-4 " +
+            "row ms-2 ps-2 mt-5 mb-4 me-0 " +
             (feature == "admin" ? "selected" : "text-secondary")
           }
         >
@@ -29,7 +29,7 @@ function AdminNavigator() {
         <Link
           to={"pages"}
           className={
-            "row ms-2 ps-2 mt-2 mb-4 " +
+            "row ms-2 ps-2 mt-2 mb-4 me-0 " +
             (feature.search("pages") != -1 ? "selected" : "text-secondary")
           }
         >
@@ -39,7 +39,7 @@ function AdminNavigator() {
         <Link
           to={"user_management"}
           className={
-            "row ms-2 ps-2 mt-2 mb-4 " +
+            "row ms-2 ps-2 mt-2 mb-4 me-0 " +
             (feature.search("user_management") != -1
               ? "selected"
               : "text-secondary")
@@ -51,7 +51,7 @@ function AdminNavigator() {
         <Link
           to={"inbox"}
           className={
-            "row ms-2 ps-2 mt-2 mb-4 " +
+            "row ms-2 ps-2 mt-2 mb-4 me-0 " +
             (feature.search("inbox") != -1 ? "selected" : "text-secondary")
           }
         >
@@ -60,7 +60,7 @@ function AdminNavigator() {
         <Link
           to={"notifications"}
           className={
-            "row ms-2 ps-2 mt-2 mb-4 " +
+            "row ms-2 ps-2 mt-2 mb-4 me-0 " +
             (feature.search("notifications") != -1
               ? "selected"
               : "text-secondary")
@@ -72,7 +72,7 @@ function AdminNavigator() {
         <Link
           to={"settings"}
           className={
-            "row ms-2 ps-2 mt-2 mb-4 " +
+            "row ms-2 ps-2 mt-2 mb-4 me-0 " +
             (feature.search("settings") != -1 ? "selected" : "text-secondary")
           }
         >
