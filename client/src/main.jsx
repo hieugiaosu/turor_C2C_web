@@ -5,10 +5,10 @@ import './index.css'
 import WebRouter from './routes/WebRouter.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.StrictMode >
     {/* <App /> */}
     {/* Comment for testing page */}
     {/* <StatisticPage/> */}
-    <WebRouter></WebRouter>
+    <WebRouter ></WebRouter>
   </React.StrictMode>,
 )

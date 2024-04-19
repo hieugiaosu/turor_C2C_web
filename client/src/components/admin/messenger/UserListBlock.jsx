@@ -56,7 +56,7 @@ export default function UserListBlock(props) {
     }, [props.userList])
     
     return (<>
-        <Container style={{ backgroundColor: 'white' }}>
+        <Container className='user-list-block' style={{ backgroundColor: 'white' }}>
             <Row className='user-list'>
                 <Col className='my-block'
                     style={{
@@ -76,7 +76,7 @@ export default function UserListBlock(props) {
                 <Col xs={10} className='padding-0'><Form.Control className='search-box' type="search" placeholder="Search" /></Col>  
                 </InputGroup>
             </Row>
-
+            <div style={{ overflowY: 'auto', maxHeight: 'calc(100% - 75px - 50px - 20px)' }}> {/*100% - user-list-height - search-height - margin-of-search */}
             {
                userList.map((user, index) => {
                     return (
@@ -87,6 +87,7 @@ export default function UserListBlock(props) {
                     )
                 })
             }
+            </div>
 
         </Container>
     </>

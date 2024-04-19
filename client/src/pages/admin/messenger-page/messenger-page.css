@@ -4,11 +4,13 @@
 .page {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     background-color:#F5F7FA;
     margin-top: 100px; /*Margin with header --> adjust it when u have header*/
     margin-left: 250px;
+    margin-bottom: 0px;
+    margin-right: 0px;
     width: calc(100% - 250px);
+    height: calc(100vh - 100px);
 }
 
 /* .login {
