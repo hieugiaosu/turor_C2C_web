@@ -15,7 +15,7 @@ function UserBlock(props)
     }
     */
     return (
-        <Row className='user-block'>
+        <Row className='user-block' onClick={()=>props.onClick()}>
             <Col xs={3} style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                     }}>
@@ -41,7 +41,7 @@ function UserBlock(props)
 
 }
 
-export default function UserListBlock(props) {
+export default function UserListBlock({userList, handleChooseFriend}) {
     /*
     props: {
         userList: [{
@@ -53,11 +53,11 @@ export default function UserListBlock(props) {
     }
     */
     
-    const [userList, setUserList] = React.useState([]);
+    const [userListReact, setUserListReact] = React.useState([]);
 
     React.useEffect(() => {
-        if (props.userList) setUserList(props.userList)
-    }, [props.userList])
+        if (userList) setUserListReact(userList)
+    }, [userList])
     
     return (<>
         <Container className='user-list-block' style={{ backgroundColor: 'white' }}>
@@ -82,12 +82,14 @@ export default function UserListBlock(props) {
             </Row>
             <div style={{ overflowY: 'auto', maxHeight: 'calc(100% - 75px - 50px - 20px)' }}> {/*100% - user-list-height - search-height - margin-of-search */}
             {
-               userList.map((user, index) => {
+               userListReact.map((user, index) => {
                     return (
                         <UserBlock key={index} name={user.name}
                             lastMessage={user.lastMessage}
                             imageSrc={user.imageSrc}
-                            isActive={user.isActive} />
+                            isActive={user.isActive}
+                            onClick={() => handleChooseFriend(user.name)}
+                        />
                     )
                 })
             }

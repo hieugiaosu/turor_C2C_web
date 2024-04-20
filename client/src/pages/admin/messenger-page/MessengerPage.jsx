@@ -45,12 +45,17 @@ export default function MessengerPage() {
         
     }, [])
 
+    const handleChooseFriend = (name) => {
+        let chosenFriend = messageData.find((user) => user.name === name)
+        setCurrentMessagesData(chosenFriend)
+    }
+
     return (<>
         <Container className='page'>
             <Row style={{height: '100%'}}>
                 <Col xs={1}></Col>
                 <Col xs={4} style={{height: '100%'}}>
-                    <UserListBlock userList={userList} />
+                    <UserListBlock userList={userList} handleChooseFriend={ handleChooseFriend} />
                 </Col>
                 <Col xs={6}>
                     <UserChatBoard imageSrc={currentMessagesData.photo}
