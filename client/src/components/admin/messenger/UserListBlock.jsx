@@ -21,16 +21,20 @@ function UserBlock(props)
                     }}>
                 <UserAvatar imageSrc={props.imageSrc} isActive={props.isActive} />
             </Col>
-            <Col xs={9} className='padding-0'>
-                <Container className='user-avatar-block' style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                    fontSize: '1.25rem', fontWeight: 'bold'
-                    }}>{props.name}</Container>
-                <Container className='user-avatar-block' style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                    fontSize: '1rem', color: 'gray', overflow: 'hidden', textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap'
-                    }}>{props.lastMessage}</Container>
+            <Col xs={9} className='padding-0'  style={{
+                        display: 'flex', alignItems: 'center'
+                        }}>
+                <Container className='padding-0'>
+                    <Container className='user-avatar-block padding-0' style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                        fontSize: '1.25rem', fontWeight: 'bold'
+                        }}>{props.name}</Container>
+                    <Container className='user-avatar-block padding-0' style={{
+                        display: 'flex', justifyContent: 'flex-start',
+                        fontSize: '1rem', color: 'gray', overflow: 'hidden', textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                        }}>{props.lastMessage}</Container>
+                </Container>
             </Col>
         </Row>
     );
