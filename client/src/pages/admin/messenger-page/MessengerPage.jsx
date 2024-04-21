@@ -12,7 +12,8 @@ export default function MessengerPage() {
     const [currentMessagesData, setCurrentMessagesData] = React.useState([]);
     
     React.useEffect(() => {
-        const messageData = getMessages();
+        let messageData = getMessages();
+        messageData = messageData.filter((user) => user.messages.length>0)
         setMessageData(messageData);
         messageData.sort((a, b) => {
             //2021-07-01T20:02:00Z
@@ -52,17 +53,15 @@ export default function MessengerPage() {
 
     return (<>
         <Container className='page'>
-            <Row style={{height: '100%'}}>
-                <Col xs={1}></Col>
-                <Col xs={4} style={{height: '100%'}}>
+            <Row style={{height: '100%', justifyContent: 'center'}}>
+                <Col xs={4} style={{height: '100%', marginLeft: '10px', marginRight: '10px'}}>
                     <UserListBlock userList={userList} handleChooseFriend={ handleChooseFriend} />
                 </Col>
-                <Col xs={6}>
+                <Col xs={7} style={{height: '100%', marginLeft: '10px', marginRight: '10px'}}>
                     <UserChatBoard imageSrc={currentMessagesData.photo}
                         name={currentMessagesData.name} isActive={currentMessagesData.isActive}
                         messages={currentMessagesData.messages} />
                 </Col>
-                <Col xs={1}></Col>
             </Row>
         </Container>
     </>

@@ -5,6 +5,8 @@ import './user-list.css'
 import './user-chat-board.css'
 import UserAvatar from './UserAvatar';
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 function UserChatInfo(props) {
     /*
@@ -146,7 +148,8 @@ export default function UserChatBoard({imageSrc, name, messages, isActive}) {
                     <InputGroup className='user-chat-group'>
                         <Form.Control className='user-chat-group-input' type='text' placeholder='Type a message'
                         value={inputValue} onChange={handleInputChange}/>
-                        <button className='user-chat-group-button' onClick={handleSendClick}>Send</button>
+                        <button className='user-chat-group-button' onClick={handleSendClick}>Send
+                            <FontAwesomeIcon icon={faPaperPlane} style={{marginLeft:'15px'}} /></button>
                     </InputGroup>
                 </Form>
 

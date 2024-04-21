@@ -47,8 +47,8 @@
     align-items: end;
     text-align: left;
     justify-content: flex-end;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -58,8 +58,8 @@
     align-items: start;
     text-align: left;
     justify-content: flex-start;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
 }
