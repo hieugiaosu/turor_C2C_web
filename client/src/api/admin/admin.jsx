@@ -147,6 +147,11 @@ const rawMessageData = {
                     "content": "You're welcome.",
                     "timestamp": "2021-07-01T20:02:00Z",
                     "isSent": true
+                }, 
+                {
+                    "content": "I've just finished updating the server as requested. Please let me know if there are any issues.",
+                    "timestamp": "2021-07-01T20:02:00Z",
+                    "isSent": true
                 }
             ]
         },

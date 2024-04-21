@@ -4,6 +4,7 @@ import {Button, Container, Row, Col, Form, InputGroup} from 'react-bootstrap';
 import './user-list.css'
 import './user-chat-board.css'
 import UserAvatar from './UserAvatar';
+import React from 'react'
 
 function UserChatInfo(props) {
     /*
@@ -42,6 +43,25 @@ function UserChatInfo(props) {
         </Row>)
 }
 
+function convertTime(timestamp) {
+    // 2021-07-01T20:00:00Z
+    const date = new Date(timestamp);
+    const now = new Date();
+
+    if (date.getDate() === now.getDate() && date.getMonth() === now.getMonth() && date.getFullYear() === now.getFullYear())
+    {
+        return (date.getHours() < 10 ? '0' + date.getHours() : date.getHours())
+        + ':' + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+    }
+    //return 03:05 20/12/2022
+    // can you add zero to first if < 10
+    return (date.getHours() < 10 ? '0' + date.getHours() : date.getHours())
+        + ':' + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+        + ' ' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+        + '/' + (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1).toString() : date.getMonth() + 1)
+        + '/' + date.getFullYear();
+}
+
 function UserChatBox(props) {
     /*props: {
         imageSrc: string
@@ -52,17 +72,28 @@ function UserChatBox(props) {
     } */
 
     return (
-        <Row className='user-chat-box'>
-            <Col xs={3} className='blue'>
-                <UserAvatar imageSrc={props.imageSrc} width='30px' height='30px' />
-            </Col>
-            <Col xs={9}  className='green'>
-            </Col>
-            
-        </Row>)
+        <Container className='user-chat-box'>
+            {!props.isSent? (props.imageSrc && <Container className='chat-avatar-container'>
+                <UserAvatar imageSrc={props.imageSrc} width='30px' height='30px'/>
+                <div style={{ marginLeft: '10px' }}>{convertTime(props.timestamp)}</div>
+            </Container>): <Container className='chat-avatar-container' style={{justifyContent: 'flex-end'}}>
+                <div style={{ marginLeft: '10px' }}>{convertTime(props.timestamp)}</div>
+            </Container>}
+
+            {props.isSent?<Container className='message-box-1-container'>
+                    <Container className='message-box-1'>
+                        <div style={{paddingTop: '10px', paddingBottom: '10px'}}>{props.message}</div>
+                    </Container>
+                </Container> :
+                <Container className='message-box-2-container'>
+                    <Container className='message-box-2'>
+                        <div style={{paddingTop: '10px', paddingBottom: '10px'}}>{props.message}</div>
+                    </Container>
+                </Container>}
+        </Container>)
 }
 
-export default function UserChatBoard(props) {
+export default function UserChatBoard({imageSrc, name, messages, isActive}) {
     /*
     props: {
         imageSrc: string
@@ -76,13 +107,51 @@ export default function UserChatBoard(props) {
         isActive: boolean
     }
     */
+    const scrollRef = React.useRef(null);
+    React.useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+        }
+    }, [messages]);
+
+    const [inputValue, setInputValue] = React.useState('');
+    
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    };
+
+    const handleSendClick = (event) => {
+        event.preventDefault();
+        console.log(inputValue);
+        setInputValue('');
+    };
+
     return (<>
-        <Container className='user-list-block white padding-0' >
-            <UserChatInfo imageSrc={props.imageSrc} name={props.name} isActive={props.isActive} /> 
-            <div style={{ overflowY: 'auto', maxHeight: 'calc(100% - 75px - 50px - 20px)' }}> {/*100% - user-list-height - search-height - margin-of-search */}
-                <UserChatBox imageSrc={props.imageSrc} name={props.name}
-                    message={'Hello'} timestamp={'timmeeeeee'} isSent={true} />
+        <Container className='user-list-block white padding-0'
+        style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <UserChatInfo imageSrc={imageSrc} name={name} isActive={isActive} /> 
+            <div ref={scrollRef} style={{ overflowY: 'auto', flexGrow: 1 }}>
+                {
+                    messages?.map((message, index) => {
+                        if (message.isSent)
+                            return <UserChatBox key={index} message={message.content}
+                                timestamp={message.timestamp} isSent={message.isSent}/>
+                        return <UserChatBox key={index} imageSrc={imageSrc} name={name}
+                            message={message.content} timestamp={message.timestamp} isSent={message.isSent} />
+                    })
+                }
             </div>
+            <Container className='user-chat-input'>
+                <Form style={{width: '100%'}}>
+                    <InputGroup className='user-chat-group'>
+                        <Form.Control className='user-chat-group-input' type='text' placeholder='Type a message'
+                        value={inputValue} onChange={handleInputChange}/>
+                        <button className='user-chat-group-button' onClick={handleSendClick}>Send</button>
+                    </InputGroup>
+                </Form>
+
+                
+            </Container>
         </Container>
     </>)
 }
