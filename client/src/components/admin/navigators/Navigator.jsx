@@ -70,6 +70,16 @@ function AdminNavigator() {
           Notifications
         </Link>
         <Link
+          to={"earning"}
+          className={
+            "row ms-2 ps-2 mt-2 mb-4 me-0 " +
+            (feature.search("earning") != -1 ? "selected" : "text-secondary")
+          }
+        >
+          <span className="material-symbols-outlined me-2">settings</span>{" "}
+          Earning
+        </Link>
+        <Link
           to={"settings"}
           className={
             "row ms-2 ps-2 mt-2 mb-4 me-0 " +

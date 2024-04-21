@@ -3,6 +3,7 @@ import App from "../App";
 import AdminPage from "../pages/admin/AdminPage";
 import UserMangementAdmin from "../pages/admin/user-management/UserManagementAdmin";
 import MessengerPage from "../pages/admin/messenger-page/MessengerPage";
+import StatisticPage from "../pages/admin/statistic-page/StatisticPage";
 
 function WebRouter() {
   return (
@@ -21,6 +22,7 @@ function WebRouter() {
           ></Route>
           <Route path="notifications" element={<></>}></Route>
           <Route path="inbox" element={<MessengerPage/>}></Route>
+          <Route path="earning" element={<StatisticPage/>}></Route>
           <Route path="settings" element={<></>}></Route>
           <Route index element={<></>} />
         </Route>
