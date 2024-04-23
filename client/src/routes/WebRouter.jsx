@@ -1,6 +1,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import App from "../App";
 import AdminPage from "../pages/admin/AdminPage";
+import HomePage from "../pages/parents/HomePage";
 
 function WebRouter() {
   return (
@@ -17,6 +18,10 @@ function WebRouter() {
           <Route path="notifications" element={<></>}></Route>
           <Route path="inbox" element={<></>}></Route>
           <Route path="settings" element={<></>}></Route>
+          <Route index element={<></>} />
+        </Route>
+        <Route path="parents" element={<HomePage></HomePage>}>
+          <Route path="pages" element={<></>}></Route>
           <Route index element={<></>} />
         </Route>
       </Routes>
