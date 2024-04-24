@@ -1,0 +1,77 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/placeholder";
+
+@import "base/typography";
+@import "base/reset";
+
+// 4. layout
+@import "layout/footer";
+@import "layout/message";
+@import "layout/header";
+@import "layout/register";
+@import "layout/instructor";
+@import "layout/breadcrumb";
+
+// components
+@import "components/hero";
+@import "components/form";
+@import "components/card";
+@import "components/faq";
+@import "components/cta";
+@import "components/badge";
+@import "components/alert";
+@import "components/modal";
+@import "components/footer";
+@import "components/range";
+@import "components/review";
+@import "components/header";
+@import "components/filter";
+// @import 'components/select';
+@import "components/profile";
+@import "components/lecture";
+@import "components/company";
+@import "components/buttons";
+@import "components/trailer";
+@import "components/progress";
+@import "components/ckeditor";
+@import "components/checkbox";
+@import "components/calendar";
+@import "components/fielpond";
+@import "components/activity";
+@import "components/category";
+@import "components/curriculum";
+@import "components/pagination";
+@import "components/breadcrumb";
+@import "components/dashedboard";
+@import "components/social-icon";
+@import "components/notification";
+@import "components/payment-card";
+@import "components/feature-card";
+@import "components/all-dropdown";
+@import "components/profileview";
+@import "components/download-file";
+@import "components/popular-tools";
+@import "components/left-slidebar";
+@import "components/dashboard-menu";
+@import "components/edit-biography";
+@import "components/payment-method";
+@import "components/rating-progress";
+// @import 'components/target-audience';
+@import "components/student-profile";
+@import "components/purchase-history";
+@import "components/social-media-box";
+
+// pages
+@import "pages/404";
+@import "pages/about";
+@import "pages/career";
+@import "pages/contact";
+@import "pages/course";
+@import "pages/student";
+@import "pages/contact";
+@import "pages/instructor";
+@import "pages/gift-course";
+@import "pages/coming-soon";
+@import "pages/become-instructor";
+@import "pages/custom";
