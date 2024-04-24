@@ -1,6 +1,9 @@
 .admin-navigator {
   background-color: #1d2026;
   color: white;
+  float: left;
+  position: fixed;
+  width: 250px;
 }
 .logo {
   color: #ff6636;
