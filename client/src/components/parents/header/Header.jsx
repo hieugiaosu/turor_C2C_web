@@ -25,13 +25,13 @@ const Header = () => {
                 <a href="/parents/course-list">Khóa học</a>
               </li>
               <li>
-                <a href="/parents/about">Gia sư</a>
+                <a href="/parents/tutors">Gia sư</a>
               </li>
               <li>
                 <a href="/parents/contact">Liên hệ đăng ký</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="/about">Lịch sử &#38; Thanh toán</a>
               </li>
             </ul>
           </div>
@@ -385,11 +385,11 @@ const Header = () => {
               </ul>
             </div>
             <div className="header-btn-wrap">
-              <a className="header-btn orange-btn" href="/create-account">
-                Create Account
+              <a className="header-btn orange-btn" href="/parents/register">
+                Tạo tài khoản
               </a>
-              <a className="header-btn div-orange-btn" href="/sign-in">
-                Sign In
+              <a className="header-btn div-orange-btn" href="/parents/login">
+                Đăng nhập
               </a>
             </div>
           </div>

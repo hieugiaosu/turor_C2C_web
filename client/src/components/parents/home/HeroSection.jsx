@@ -13,8 +13,8 @@ const HeroSection = () => {
                 của con bạn. Giải pháp giáo dục cá nhân hóa để hướng dẫn con trẻ
                 của bạn tiến bước mạnh mẽ vào tương lai.
               </p>
-              <a className="button button--lg" href="/create-account">
-                Create Account
+              <a className="button button--lg" href="/parents/register">
+                Tạo tài khoản
               </a>
             </div>
           </div>
