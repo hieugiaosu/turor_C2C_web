@@ -1,0 +1,76 @@
+.download-file {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background: #f5f7fa;
+
+  &-left {
+    display: flex;
+
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1d2026;
+      margin: 0;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: -0.01em;
+      color: #6e7485;
+    }
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  &-right {
+    a {
+      padding: 0 24px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 48px;
+      letter-spacing: -0.008em;
+      text-transform: capitalize;
+      color: #fff;
+      background-color: $primary-500;
+      transition: 0.3s;
+    }
+    a:hover {
+      background-color: $primary-600;
+      color: #fff;
+    }
+
+    a:hover {
+      background-color: $primary-600;
+      color: #fff;
+    }
+  }
+}
+
+@include mq('tablet-small', max) {
+  .download-file {
+    flex-wrap: wrap;
+
+    .download-file-right {
+      a {
+        padding: 0 15px;
+        font-size: 14px;
+        line-height: 40px;
+      }
+    }
+
+    &-left {
+      margin-bottom: 10px;
+
+      h3 {
+        font-size: 14px;
+        line-height: 15px;
+      }
+    }
+  }
+}

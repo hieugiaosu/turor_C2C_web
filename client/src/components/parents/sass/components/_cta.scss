@@ -1,0 +1,131 @@
+.cat-section {
+  background: #f5f7fa;
+  padding: 80px 0 320px;
+}
+
+.cta-left {
+  padding: 40px;
+  position: relative;
+  background: url(.png), linear-gradient(90deg, #cc522b 0%, #ff6636 100%);
+  @include mq('tablet-small', max) {
+    padding: 30px;
+  }
+
+  @include max(1200px) {
+    margin-bottom: 24px;
+  }
+
+  .cat-thumb {
+    position: absolute;
+    bottom: 0;
+    right: 37px;
+    img {
+      height: 100%;
+    }
+    @include mq('tablet-small', max) {
+      display: none;
+    }
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin-bottom: 10px;
+    @include mq('tablet-small', max) {
+      font-size: 26px;
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin-right: 239px;
+    margin-bottom: 24px;
+    @include mq('tablet-small', max) {
+      margin-right: 0;
+    }
+  }
+}
+
+.cta-right {
+  background-color: #fff;
+  padding: 38px;
+  @include mq('tablet-small', max) {
+    padding: 30px;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    color: #1d2026;
+    margin-bottom: 15px;
+    @include mq('tablet-small', max) {
+      font-size: 26px;
+    }
+    @include max(767px) {
+      text-align: center;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include max(991px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @include max(480px) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1d2026;
+      margin: 10px 0;
+      flex: 0 0 50%;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: 600;
+        flex-shrink: 0;
+        @include mq('desktop-wide', max) {
+          width: 60px;
+          height: 60px;
+          line-height: 45px;
+        }
+      }
+      span.color-1 {
+        color: #564ffd;
+        background-color: #ebebff;
+      }
+      span.color-2 {
+        color: #ff6636;
+        background: #fff0f0;
+      }
+      span.color-3 {
+        color: #e34444;
+        background: #fff0f0;
+      }
+      span.color-4 {
+        color: #23bd33;
+        background: #e1f7e3;
+      }
+    }
+  }
+}
