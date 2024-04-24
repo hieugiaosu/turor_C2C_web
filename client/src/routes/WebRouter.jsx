@@ -21,7 +21,7 @@ function WebRouter() {
           <Route index element={<></>} />
         </Route>
         <Route path="parents" element={<HomePage></HomePage>}>
-          <Route path="pages" element={<></>}></Route>
+          <Route path="course-list" element={<></>}></Route>
           <Route index element={<></>} />
         </Route>
       </Routes>

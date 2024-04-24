@@ -1,6 +1,8 @@
 import React from "react";
 // import "../sass/main.scss";
 import "../sass/main.scss";
+import Logo from "../../../assets/parents/LOGO.svg";
+import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -8,32 +10,36 @@ const Header = () => {
       <div className="header-section">
         <div className="header-top">
           <div className="responsive-logo">
-            <a href="/">
-              <img src="assets/images/svg-icon/logo.svg" alt="brand-logo" />
+            <a href="/parents">
+              <img src={Logo} alt="brand-logo" />
             </a>
           </div>
           <div className="main-menu">
             <ul>
               <li>
                 <a className="active" href="/parents">
-                  Home
+                  Trang Chủ
                 </a>
               </li>
               <li>
-                <a href="/course-list">Courses</a>
+                <a href="/parents/course-list">Khóa học</a>
+              </li>
+              <li>
+                <a href="/parents/about">Gia sư</a>
+              </li>
+              <li>
+                <a href="/parents/contact">Liên hệ đăng ký</a>
               </li>
               <li>
                 <a href="/about">About</a>
               </li>
-              <li>
-                <a href="/contact">Contact</a>
-              </li>
-              <li>
-                <a href="/become-instructor">Become an Instructor</a>
-              </li>
             </ul>
           </div>
-
+          <div class="header-right">
+            <span style={{ fontSize: 15, color: "#8C94A3" }}>
+              Trang dành cho Phụ huynh/Học sinh
+            </span>
+          </div>
           <div className="menu-bar">
             <svg
               width={24}
@@ -70,56 +76,21 @@ const Header = () => {
           <div className="header-bottom-left">
             <div className="header-bottom-left-wrap">
               <div className="main-logo">
-                <a href="/">
-                  <img src="assets/images/svg-icon/logo.svg" alt="brand-logo" />
+                <a href="/parents">
+                  <img src={Logo} alt="brand-logo" />
                 </a>
               </div>
-              <div className="borwser-dropdown">
-                <div className="select-box">
-                  <div className="custom-select-wrapper">
-                    <select
-                      className="custom-select sources"
-                      title="Browse"
-                      style={{ display: "none" }}
-                    >
-                      <option value="1">Mozila</option>
-                      <option value="2">Chrome</option>
-                      <option value="3">Safari</option>
-                    </select>
-                    <div className="custom-select sources">
-                      <span className="custom-select-trigger">Browse</span>
-                      <div className="custom-options">
-                        <span
-                          className="custom-option undefined"
-                          data-value="undefined"
-                        >
-                          Mozila
-                        </span>
-                        <span
-                          className="custom-option undefined"
-                          data-value="undefined"
-                        >
-                          Chrome
-                        </span>
-                        <span
-                          className="custom-option undefined"
-                          data-value="undefined"
-                        >
-                          Safari
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <div className="search-field-wrap">
                 <form action="#">
-                  {/* Search Field  */}
                   <div className="form-searchbox">
                     <span className="icon">
-                      <img src="assets/images/svg-icon/search.svg" alt="" />
+                      <FaSearch />
                     </span>
-                    <input type="text" placeholder="What do you want learn" />
+                    <input
+                      type="text"
+                      placeholder="Bạn muốn tìm kiếm thông tin gì?"
+                    />
                   </div>
                 </form>
               </div>

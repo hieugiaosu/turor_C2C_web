@@ -1,0 +1,79 @@
+.dashboard {
+  background-color: #fff;
+
+  &-content {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .dashboard-left {
+      span {
+        color: #6e7485;
+        font-size: 14px;
+
+        font-weight: 400;
+        margin-top: 6px;
+        line-height: 22px;
+      }
+
+      p {
+        color: #1d2026;
+        font-size: 20px;
+
+        font-weight: 600;
+        margin: 0;
+        line-height: 26px;
+      }
+    }
+
+    .dashboard-right {
+      display: flex;
+      justify-content: space-between;
+
+      .notification {
+        padding: 12px;
+        cursor: pointer;
+        margin-left: 16px;
+        background: #f5f7fa;
+      }
+
+      img {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .bg {
+    background-color: #ffff;
+    padding: 10px;
+  }
+
+  @include mq('phone-wide', max) {
+    .dashboard {
+      &-content {
+        .dashboard-right {
+          flex-wrap: wrap-reverse;
+          justify-content: end;
+
+          .searchbox {
+            display: none;
+          }
+          .notification {
+            background: #f5f7fa;
+            padding: 12px;
+            margin: 0 8px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
