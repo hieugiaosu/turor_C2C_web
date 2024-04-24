@@ -137,10 +137,10 @@ const TutorSection = () => {
             </div>
             <div className="icon-bottom-btn mt-4">
               <p>
-                Thousands of students waiting for a instructor. Start teaching
-                &amp; earning now!.{" "}
+                Hãy lựa chọn giảng viên phù hợp để con bạn có một hành trình học
+                tập thành công!
                 <a href="become-instructor.html">
-                  Become Instructor
+                  Tìm kiếm gia sư ngay!
                   <svg
                     width={24}
                     height={24}
