@@ -1,6 +1,4 @@
-/*-----------------------------------------------*/
-
-.page {
+.user-page {
   display: flex;
   flex-direction: column;
   background-color: #f5f7fa;
@@ -9,5 +7,4 @@
   margin-bottom: 0px;
   margin-right: 0px;
   width: calc(100% - 250px);
-  height: calc(100vh - 50px);
 }
