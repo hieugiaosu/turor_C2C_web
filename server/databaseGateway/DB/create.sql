@@ -21,8 +21,16 @@ CREATE TABLE GiaSu(
 
 CREATE TABLE DonTuyenGiaSu(
 	ID INT AUTO_INCREMENT PRIMARY KEY,
-    CCCD CHAR(10) NOT NULL
-    
+    CCCD CHAR(10) NOT NULL,
+    GioiTinh BOOLEAN,
+    ID_MonHoc INT,
+    DiaChi VARCHAR(255),
+    TieuDe VARCHAR(255),
+    SoLuong INT,
+    HocPhi INT,
+    Lop INT,
+    ThoiGian VARCHAR(255),
+    TinhTrangDuyet VARCHAR(20)
 );
 
 CREATE TABLE DonDangKyLamGiaSu(
