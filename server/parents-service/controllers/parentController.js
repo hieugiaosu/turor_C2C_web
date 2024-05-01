@@ -2,6 +2,7 @@ const {
   createParent,
   Authenticate,
   PaymentPostService,
+  GetTutorService,
 } = require("../services/index.js");
 const jwt = require("jsonwebtoken");
 const Login = async (req, res) => {
@@ -47,4 +48,16 @@ const PaymentForPost = async (req, res) => {
     res.status(400).json({ message: "Thanh toán thất bại", EC: -1 });
   }
 };
-module.exports = { Login, SignUp, PaymentForPost };
+const GetTutor = async (req, res) => {
+  const result = await GetTutorService();
+  if (result) {
+    if (result.length === 0) {
+      res.status(400).json({ message: "Không tìm thấy gia sư nào", EC: -1 });
+    } else {
+      res.status(200).json({ data: result, EC: 0 });
+    }
+  } else {
+    res.status(400).json({ message: "Không thể lấy danh sách", EC: -2 });
+  }
+};
+module.exports = { Login, SignUp, PaymentForPost, GetTutor };

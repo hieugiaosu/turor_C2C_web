@@ -62,4 +62,14 @@ const PaymentPostService = async () => {
   const url = payment.checkoutUrl;
   return url;
 };
-module.exports = { createParent, Authenticate, PaymentPostService };
+const GetTutorService = async () => {
+  const selectAllTutor = `SELECT * FROM NguoiDung WHERE CCCD IN (SELECT CCCD FROM GiaSu)`;
+  const [result] = await db.promise().query(selectAllTutor);
+  return result;
+};
+module.exports = {
+  createParent,
+  Authenticate,
+  PaymentPostService,
+  GetTutorService,
+};
