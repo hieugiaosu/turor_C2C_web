@@ -1,5 +1,18 @@
 import React from "react";
+import { postPayment } from "../../../services/apiParents";
+import { redirect, useNavigate } from "react-router-dom";
 const CartSection = () => {
+  let navigate = useNavigate();
+  const handleClickPayment = async () => {
+    let data = await postPayment();
+    console.log("====================================");
+    console.log(data);
+    console.log("====================================");
+    if (data && data.EC === 0) {
+      window.location.href = data.data;
+    }
+  };
+
   const info = {
     name: "Khám phá toán tư duy Soroban cho học sinh tiểu học",
     title:
@@ -171,6 +184,9 @@ const CartSection = () => {
                     <a
                       className="button button--lg button-i--r d-block"
                       href="#"
+                      onClick={() => {
+                        handleClickPayment();
+                      }}
                     >
                       Xác nhận thanh toán
                       <span>

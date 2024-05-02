@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../../assets/parents/LOGO.svg";
+import EyeIcon from "../../../assets/parents/images/svg-icon/eye-open.svg";
 import Banner from "../../../assets/parents/images/banner/rocket.png";
 
 const RegisterComponent = () => {
@@ -158,10 +159,7 @@ const RegisterComponent = () => {
                           className="icon icon--eye"
                           onclick="showPassword('password',this)"
                         >
-                          <img
-                            src="assets/images/svg-icon/eye-open.svg"
-                            alt="eye-icon"
-                          />
+                          <img src={EyeIcon} alt="eye-icon" />
                         </span>
                       </div>
                     </div>
@@ -189,10 +187,7 @@ const RegisterComponent = () => {
                           className="icon icon--eye"
                           onclick="showPassword('confirmPass',this)"
                         >
-                          <img
-                            src="assets/images/svg-icon/eye-open.svg"
-                            alt="eye-icon"
-                          />
+                          <img src={EyeIcon} alt="eye-icon" />
                         </span>
                       </div>
                     </div>

@@ -54,10 +54,10 @@ const PaymentPostService = async () => {
   const payment = await payos.createPaymentLink({
     amount: 10000,
     currency: "VND",
-    description: "Thanh toán cho bài viết",
+    description: "Thanh toán khóa học",
     orderCode: Number(String(Date.now()).slice(-6)),
-    returnUrl: "http://localhost:8080/api/parent/payment",
-    cancelUrl: "http://localhost:8080/api/parent/payment",
+    returnUrl: "http://localhost:5173/parents/",
+    cancelUrl: "http://localhost:5173/parents/payment",
   });
   const url = payment.checkoutUrl;
   return url;

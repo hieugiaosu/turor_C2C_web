@@ -32,8 +32,8 @@ function WebRouter() {
             element={<UserMangementAdmin></UserMangementAdmin>}
           ></Route>
           <Route path="notifications" element={<></>}></Route>
-          <Route path="inbox" element={<MessengerPage/>}></Route>
-          <Route path="earning" element={<StatisticPage/>}></Route>
+          <Route path="inbox" element={<MessengerPage />}></Route>
+          <Route path="earning" element={<StatisticPage />}></Route>
           <Route path="settings" element={<></>}></Route>
           <Route index element={<></>} />
         </Route>
