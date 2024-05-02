@@ -258,7 +258,6 @@ const RegisterComponent = () => {
             </div>
           </div>
         </main>
-        {"{"}% endblock %{"}"}
       </>
     </>
   );

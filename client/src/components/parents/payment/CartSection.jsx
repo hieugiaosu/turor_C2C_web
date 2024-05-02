@@ -1,8 +1,6 @@
 import React from "react";
 import { postPayment } from "../../../services/apiParents";
-import { redirect, useNavigate } from "react-router-dom";
 const CartSection = () => {
-  let navigate = useNavigate();
   const handleClickPayment = async () => {
     let data = await postPayment();
     console.log("====================================");
@@ -64,7 +62,6 @@ const CartSection = () => {
     ],
   };
   return (
-    <>
       <div className="public-shopping-cart-section section-padding">
         <div className="container">
           <div className="student-title">
@@ -232,7 +229,6 @@ const CartSection = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

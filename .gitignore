@@ -1,2 +1,7 @@
 .history/
+<<<<<<< HEAD
 **/node_modules
+=======
+server/package-lock.json
+client/package-lock.json
+>>>>>>> main
