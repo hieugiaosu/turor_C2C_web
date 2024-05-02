@@ -1,0 +1,158 @@
+.user-list-block {
+   width: 100%;
+   height: calc(100vh - 150px);
+}
+
+.user-list {
+    width: 100%;
+    height: 75px;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.my-block {
+    display: inline-block;
+    height: 100%;
+    padding: 0px;
+}
+
+.compose-button {
+    background-color: #EBEBFF;
+    color: #564FFD;
+    font-weight: 500;
+    margin-right: 0!important;
+}
+
+.compose-button:hover {
+    background-color:#564FFD;
+    color: #EBEBFF;
+}
+
+.search-box {
+    width: 100%;
+    height: 100%;
+    margin: 0!important;
+    border:none;
+}
+
+.search-box:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.search-button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-weight: 500;
+    margin-right: 0!important;
+    
+    color: #000;
+    border: none;
+}
+
+.search-button,  .search-button:focus {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    outline: none;
+    box-shadow: none!important;
+}
+
+.search-button:active, .search-button:hover {
+    background-color: transparent;
+    color: #564FFD;
+    border: none;
+    outline: none;
+    box-shadow: none!important;
+}
+
+
+.search {
+    width: 100%;
+    height: 50px;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    margin-top: 0!important;
+    margin-bottom: 20px;
+    padding: 0!important;
+    border: 1px solid #ccc;
+}
+
+.padding-0 {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.user-block {
+    width: 100%;
+    height: 75px;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    padding: 0!important;
+    cursor: pointer;
+}
+
+.user-block:hover {
+    background-color: #FFDDD1;
+}
+
+.user-avatar {
+    width: 62.5px;
+    height: 62.5px;
+    border-radius: 50%;
+    background-color: rgb(158, 153, 153);
+   
+}
+
+.user-avatar-block {
+    width: 100%;
+    padding: 0px 0px 0px 7px;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-avatar {
+    border-radius: 50%;
+}
+
+.status-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    border: 2px solid white;
+}
+
+.status-dot.active {
+    background-color: green;
+}
+
+.status-dot.inactive {
+    background-color: red;
+}
+
+
+/*Test color for debug*/
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.white {
+    background-color: white;
+}

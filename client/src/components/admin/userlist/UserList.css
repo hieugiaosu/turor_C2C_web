@@ -1,0 +1,12 @@
+.user-item {
+  width: 96%;
+}
+
+.orange {
+  color: #ff6636;
+}
+
+.user-item:hover {
+  background-color: #dbdbdb;
+  cursor: pointer;
+}
