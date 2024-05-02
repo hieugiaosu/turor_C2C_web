@@ -1,4 +1,4 @@
-const rawMessageData = {
+let rawMessageData = {
     "data": [{
         "id": 1,
         "name": "John Doe",
@@ -242,7 +242,7 @@ sendMessage
 export async function getMessagesWithOther(otherID)
 {
     // wait 0.5s 
-    await new Promise(r => setTimeout(r, 500));
+    await new Promise(r => setTimeout(r, 50));
 
     // fetch data with user token and otherID, blah blah
     const result = rawMessageData.data.find(user => user.id === otherID);
@@ -275,5 +275,19 @@ export async function getUsersMessageWith() {
                 isSent: isSent
             }
         }
+    });
+}
+
+export async function sendMessage(otherID, content) {
+    //
+    // send message to otherID with content
+    // call api
+    // wait 0.5s
+    await new Promise(r => setTimeout(r, 50));
+    
+    rawMessageData.data.find(user => user.id === otherID).messages.push({
+        content: content,
+        timestamp: new Date().toISOString(),
+        isSent: true
     });
 }

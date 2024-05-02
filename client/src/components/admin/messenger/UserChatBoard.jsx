@@ -7,6 +7,7 @@ import UserAvatar from './UserAvatar';
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { sendMessage } from '../../../api/admin/admin';
 
 function UserChatInfo(props) {
     /*
@@ -95,7 +96,7 @@ function UserChatBox(props) {
         </Container>)
 }
 
-export default function UserChatBoard({imageSrc, name, messages, isActive}) {
+export default function UserChatBoard({id, imageSrc, name, messages, isActive, handleSendMessage}) {
     /*
     props: {
         imageSrc: string
@@ -122,8 +123,13 @@ export default function UserChatBoard({imageSrc, name, messages, isActive}) {
         setInputValue(event.target.value);
     };
 
+
+
     const handleSendClick = (event) => {
         event.preventDefault();
+
+        handleSendMessage(id, inputValue)
+
         console.log(inputValue);
         setInputValue('');
     };

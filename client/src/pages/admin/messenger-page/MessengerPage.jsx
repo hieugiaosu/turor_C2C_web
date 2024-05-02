@@ -1,6 +1,6 @@
 import React from "react";
 import "./messenger-page.css";
-import { getMessagesWithOther, getUsersMessageWith } from "../../../api/admin/admin";
+import { getMessagesWithOther, getUsersMessageWith, sendMessage } from "../../../api/admin/admin";
 import { Container, Row, Col  } from "react-bootstrap";
 import UserListBlock from "../../../components/admin/messenger/UserListBlock";
 import UserChatBoard from "../../../components/admin/messenger/UserChatBoard";
@@ -32,8 +32,24 @@ export default function MessengerPage() {
 
       handleChooseFriend(firstFriendId);
       }
-      fetchData();
+    fetchData();
   }, []);
+
+  const handleSendMessage = async (id, content) => {
+    sendMessage(id, content)
+    if (!currentMessagesData) return;
+    const chosenFriend = await getMessagesWithOther(currentMessagesData.id);
+    
+    
+    const newChosenFriend = { ...chosenFriend };
+    newChosenFriend.messages = [...chosenFriend.messages]
+
+    if(newChosenFriend != currentMessagesData)
+    {
+      setCurrentMessagesData(newChosenFriend);
+      console.log("Update messages")
+    }
+  }
 
   return (
     <>
@@ -54,10 +70,12 @@ export default function MessengerPage() {
             style={{ height: "100%", marginLeft: "10px", marginRight: "10px" }}
           >
             {currentMessagesData ? <UserChatBoard
+              id = {currentMessagesData.id}
               imageSrc={currentMessagesData.photo}
               name={currentMessagesData.name}
               isActive={currentMessagesData.isActive}
               messages={currentMessagesData.messages}
+              handleSendMessage={handleSendMessage}
             />: <SpinnerBoard/>}
             
           </Col>
