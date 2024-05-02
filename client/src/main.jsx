@@ -4,7 +4,6 @@ import Header from "./components/parents/header/Header.jsx";
 // import App from './App.jsx'
 // import "./index.css";
 import StatisticPage from "./pages/admin/statistic-page/StatisticPage.jsx";
-import Header from "./components/parents/header/Header.jsx";
 import WebRouter from "./routes/WebRouter.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
