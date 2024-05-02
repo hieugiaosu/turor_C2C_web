@@ -168,6 +168,79 @@ const rawMessageData = {
     ]
 }
 
+// Base Table
+
+/*
+CREATE TABLE TinNhan(
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+	ThoiGian DATETIME,
+    NoiDung VARCHAR(255),
+    NguoiGui VARCHAR(50),
+    NguoiNhan VARCHAR(50)
+);
+
+Load message from 2 user with user token
+
+bla bla ...
+
+
+
+getMessagesWithOther(otherID)
+example json data:
+{
+    "id": 1,
+    "name": "John Doe",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isActive": true,
+    "messages": [
+        {
+            "content": "Hello, how are you?",
+            "timestamp": "2024-04-19T12:00:00Z",
+            "isSent": true
+        },
+    ]
+}
+
+getUsersMessageWith()
+[{
+    "id": 1,
+    "name": "John Doe",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isActive": true,
+    "lastMessage": {
+        "content": "Hello, how are you?",
+        "timestamp": "2024-04-19T12:00:00Z",
+        "isSent": true
+    }
+}, {
+    "id": 2,
+    "name": "John Doe 2",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isActive": true,
+    "lastMessage": {
+        "content": "Hello, how are you?",
+        "timestamp": "2024-04-19T12:00:00Z",
+        "isSent": true
+    }
+}]
+
+sendMessage
+{
+    "id": 1,
+    "content": "Hello, how are you?",
+    "timestamp": "2024-04-19T12:00:00Z",
+}
+
+
+
+*/
+
+export function getMessagesWithOther(otherID)
+{
+    // fetch data with user token and otherID, blah blah
+    return rawMessageData.data[otherID];
+}
+
 export function getMessages() {
     // fetch data with user token, blah blah
     return rawMessageData.data;
