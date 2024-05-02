@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import "../sass/main.scss";
 import "../sass/main.scss";
 import Logo from "../../../assets/parents/LOGO.svg";
 import { FaSearch } from "react-icons/fa";
+import { Outlet } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
+  const { activeLink } = props;
+
   return (
     <>
       <div className="header-section">
@@ -17,21 +20,42 @@ const Header = () => {
           <div className="main-menu">
             <ul>
               <li>
-                <a className="active" href="/parents">
+                <a
+                  className={activeLink === "home" ? "active" : ""}
+                  href="/parents"
+                >
                   Trang Chủ
                 </a>
               </li>
               <li>
-                <a href="/parents/course-list">Khóa học</a>
+                <a
+                  className={activeLink === "courses" ? "active" : ""}
+                  href="/parents/courses"
+                >
+                  Khóa học
+                </a>
               </li>
               <li>
-                <a href="/parents/tutors">Gia sư</a>
+                <a
+                  className={activeLink === "tutors" ? "active" : ""}
+                  href="/parents/tutors"
+                >
+                  Gia sư
+                </a>
               </li>
               <li>
-                <a href="/parents/contact">Liên hệ đăng ký</a>
+                <a
+                  className={activeLink === "contact" ? "active" : ""}
+                  href="/parents/contact"
+                >
+                  Liên hệ đăng ký
+                </a>
               </li>
               <li>
-                <a href="/about">Lịch sử &#38; Thanh toán</a>
+                <a href="/parents/payment">Thanh toán</a>
+              </li>
+              <li>
+                <a href="/parents/history">Lịch sử</a>
               </li>
             </ul>
           </div>

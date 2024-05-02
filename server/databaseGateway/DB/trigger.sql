@@ -11,7 +11,7 @@ DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER before_insert_taikhoannguoidung
-BEFORE INSERT ON TaiKhoanAdmin
+BEFORE INSERT ON TaiKhoanNguoiDung
 FOR EACH ROW
 BEGIN
 	INSERT INTO TaiKhoan(TenDangNhap)

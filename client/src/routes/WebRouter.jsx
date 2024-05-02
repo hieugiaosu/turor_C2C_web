@@ -8,6 +8,11 @@ import HomePage from "../pages/parents/HomePage";
 import LoginPage from "../pages/parents/LoginPage";
 import Header from "../components/parents/header/Header";
 import RegisterPage from "../pages/parents/RegisterPage";
+import CoursesPage from "../pages/parents/CoursesPage";
+import TutorsPage from "../pages/parents/TutorsPage";
+import ContactPage from "../pages/parents/ContactPage";
+import PaymentPage from "../pages/parents/PaymentPage";
+import HistoryPage from "../pages/parents/HistoryPage";
 
 function WebRouter() {
   return (
@@ -31,11 +36,14 @@ function WebRouter() {
           <Route index element={<></>} />
         </Route>
         {/* start parents router */}
-        <Route path="/parents" element={<HomePage />}>
-          <Route path="course-list" element={<></>}></Route>
-        </Route>
-        <Route path="parents/login" element={<LoginPage />}></Route>
-        <Route path="parents/register" element={<RegisterPage />}></Route>
+        <Route path="parents" element={<HomePage />} />
+        <Route path="parents/courses" element={<CoursesPage />} />
+        <Route path="parents/tutors" element={<TutorsPage />} />
+        <Route path="parents/contact" element={<ContactPage />} />
+        <Route path="parents/payment" element={<PaymentPage />} />
+        <Route path="parents/history" element={<HistoryPage />} />
+        <Route path="parents/login" element={<LoginPage />} />
+        <Route path="parents/register" element={<RegisterPage />} />
         {/* end parents router */}
       </Routes>
     </BrowserRouter>
