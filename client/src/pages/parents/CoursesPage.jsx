@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/parents/header/Header";
 import Footer from "../../components/parents/footer/Footer";
 import FilterSection from "../../components/parents/tutor/FilterSection";
-import TutorsSection from "../../components/parents/tutor/TutorsSection";
+import CoursesSection from "../../components/parents/courses/CoursesSection";
 const CoursesPage = () => {
   return (
     <>
@@ -12,7 +12,7 @@ const CoursesPage = () => {
           <FilterSection />
         </div>
         <div className="px-3 col-xl-8">
-          <TutorsSection />
+          <CoursesSection />
         </div>
       </div>
       <Footer />

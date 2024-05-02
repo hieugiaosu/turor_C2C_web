@@ -10,6 +10,8 @@ import TutorsPage from "../pages/parents/TutorsPage";
 import ContactPage from "../pages/parents/ContactPage";
 import PaymentPage from "../pages/parents/PaymentPage";
 import HistoryPage from "../pages/parents/HistoryPage";
+import TutorProfile from "../components/parents/tutorProfile/TutorProfile";
+import CourseProfile from "../components/parents/courses/CourseProfile";
 
 function WebRouter() {
   return (
@@ -32,6 +34,8 @@ function WebRouter() {
         <Route path="parents" element={<HomePage />} />
         <Route path="parents/courses" element={<CoursesPage />} />
         <Route path="parents/tutors" element={<TutorsPage />} />
+        <Route path="parents/tutor-profile" element={<TutorProfile />} />
+        <Route path="parents/course-profile" element={<CourseProfile />} />
         <Route path="parents/contact" element={<ContactPage />} />
         <Route path="parents/payment" element={<PaymentPage />} />
         <Route path="parents/history" element={<HistoryPage />} />
