@@ -16,12 +16,12 @@ function UserBlock(props)
     */
     return (
         <Row className='user-block' onClick={()=>props.onClick()}>
-            <Col xs={3} style={{
+            <Col xs={4} style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                     }}>
                 <UserAvatar imageSrc={props.imageSrc} isActive={props.isActive} />
             </Col>
-            <Col xs={9} className='padding-0'  style={{
+            <Col xs={8} className='padding-0'  style={{
                         display: 'flex', alignItems: 'center'
                         }}>
                 <Container className='padding-0'>
