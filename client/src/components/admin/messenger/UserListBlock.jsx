@@ -4,22 +4,22 @@ import { FaSearch } from 'react-icons/fa';
 import './user-list.css'
 import UserAvatar from './UserAvatar';
 
-function UserBlock(props) 
+function UserBlock({photo, onClick, name, lastMessage, isActive}) 
 {
     /*
     props: {
-        imageSrc: string
+        photo: string
         name: string
         lastMessage: string
         isActive: boolean
     }
     */
     return (
-        <Row className='user-block' onClick={()=>props.onClick()}>
+        <Row className='user-block' onClick={()=>onClick()}>
             <Col xs={4} style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                     }}>
-                <UserAvatar imageSrc={props.imageSrc} isActive={props.isActive} />
+                <UserAvatar imageSrc={photo} isActive={isActive} />
             </Col>
             <Col xs={8} className='padding-0'  style={{
                         display: 'flex', alignItems: 'center'
@@ -28,12 +28,12 @@ function UserBlock(props)
                     <Container className='user-avatar-block padding-0' style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         fontSize: '1.25rem', fontWeight: 'bold'
-                        }}>{props.name}</Container>
+                        }}>{name}</Container>
                     <Container className='user-avatar-block padding-0' style={{
                         display: 'flex', justifyContent: 'flex-start',
                         fontSize: '1rem', color: 'gray', overflow: 'hidden', textOverflow: 'ellipsis',
                         whiteSpace: 'nowrap'
-                        }}>{props.lastMessage}</Container>
+                        }}>{lastMessage}</Container>
                 </Container>
             </Col>
         </Row>
@@ -45,10 +45,15 @@ export default function UserListBlock({userList, handleChooseFriend}) {
     /*
     props: {
         userList: [{
-            imageSrc: string
+            id: string
             name: string
-            lastMessage: string
+            photo: string
             isActive: boolean
+            lastMessage: {
+                content: string
+                timestamp: string
+                isSent: boolean
+            }
         }]
     }
     */
@@ -85,10 +90,10 @@ export default function UserListBlock({userList, handleChooseFriend}) {
                userListReact.map((user, index) => {
                     return (
                         <UserBlock key={index} name={user.name}
-                            lastMessage={user.lastMessage}
-                            imageSrc={user.imageSrc}
+                            lastMessage={user.lastMessage.content}
+                            photo={user.photo}
                             isActive={user.isActive}
-                            onClick={() => handleChooseFriend(user.name)}
+                            onClick={() => handleChooseFriend(user.id)}
                         />
                     )
                 })

@@ -119,7 +119,11 @@ const rawMessageData = {
         "name": "Michael Wilson",
         "photo": "https://randomuser.me/api/portraits/men/5.jpg",
         "isActive": true,
-        "messages": []
+        "messages": [{
+                "content": "Good night",
+                "timestamp": "2024-04-19T09:05:00Z",
+                "isSent": false
+            }]
     }, {
         "id": 6,
         "name": "Jack Johnson",
@@ -235,13 +239,41 @@ sendMessage
 
 */
 
-export function getMessagesWithOther(otherID)
+export async function getMessagesWithOther(otherID)
 {
+    // wait 0.5s 
+    await new Promise(r => setTimeout(r, 500));
+
     // fetch data with user token and otherID, blah blah
-    return rawMessageData.data[otherID];
+    const result = rawMessageData.data.find(user => user.id === otherID);
+    return result;
 }
 
-export function getMessages() {
-    // fetch data with user token, blah blah
-    return rawMessageData.data;
+export async function getUsersMessageWith() {
+    // load something
+    // wait 0.5s  
+    await new Promise(r => setTimeout(r, 500));
+
+    return rawMessageData.data.map(user => {
+        let content = "";
+        let timestamp = "";
+        let isSent = false;
+        let messages = user.messages.filter(message => !message.isSent);
+        if (messages.length > 0) {
+            content = messages[messages.length - 1].content;
+            timestamp = messages[messages.length - 1].timestamp;
+            isSent = messages[messages.length - 1].isSent;
+        }
+        return {
+            id: user.id,
+            name: user.name,
+            photo: user.photo,
+            isActive: user.isActive,
+            lastMessage: {
+                content: content,
+                timestamp: timestamp,
+                isSent: isSent
+            }
+        }
+    });
 }
