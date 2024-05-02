@@ -10,7 +10,7 @@ import TutorSection from "../../components/parents/home/TutorSection";
 const HomePage = () => {
   return (
     <>
-      <Header />
+      <Header activeLink="home" />
       <HeroSection />
       <CategorySection />
       <CourseSection />
