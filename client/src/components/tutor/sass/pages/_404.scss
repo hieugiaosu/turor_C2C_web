@@ -1,0 +1,23 @@
+.e_screenfix {
+  margin-right: calc((-100vw + 100%) / 2);
+  max-width: 1618px;
+  @include max(991px) {
+    max-width: 100%;
+  }
+}
+.header-bottom.border_bottom {
+  border-bottom: 1px solid #e9eaf0;
+}
+.page404-section {
+  display: flex;
+  align-items: center;
+  min-height: 715px;
+  overflow: hidden;
+  @include mq('tablet-small', max) {
+    min-height: 75vh;
+  }
+}
+.thumb404 {
+  position: relative;
+  left: 7px;
+}
