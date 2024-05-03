@@ -3,7 +3,7 @@ import '../messenger-page/messenger-page.css'
 import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import {Row, Col} from 'react-bootstrap'
-
+import { faDollarSign, faScaleBalanced, faMoneyBillTransfer, faCalendarWeek} from "@fortawesome/free-solid-svg-icons";
 import { Chart as ChartJS, registerables } from 'chart.js';
 import StatBlock from "../../../components/admin/statistic/StatBlock";
 ChartJS.register(...registerables);
@@ -57,21 +57,24 @@ const MyChart = () => {
 export default function StatisticPage() {
     return (
         <Container className='page'>
-          <Row className="stat-blocks">
-            <StatBlock />
-            <StatBlock />
-            <StatBlock />
-            <StatBlock />
+          <Row className="stat-blocks justify-content-md-center">
+              <StatBlock icon={faDollarSign} value={"$13,804"} description={"Total revenue"} />
+              <StatBlock icon={faScaleBalanced} value={"$13,804"} description={"Current Balance"} color="#2596be"/>
+              <StatBlock icon={faMoneyBillTransfer} value={"$13,804"} description={"Total Withdrawals"} color="#B27300" />
+              <StatBlock icon={faCalendarWeek} value={"$13,804"} description={"Today Revenue"} color="#009900" />
           </Row>
-            <Container className="block-statistic blue">Stat</Container>
-            <Row style={{justifyContent: 'center'}}>
-                <Col xs = {6} style={{marginLeft: '10px', marginRight: '10px', backgroundColor: 'white'}}>
-                    <MyChart />
-                </Col>
-                <Col xs={4}
-                    style={{ marginLeft: '10px', marginRight: '10px', backgroundColor: 'white' }}>
-                </Col>
-            </Row>
+        
+          <Row style={{justifyContent: 'center', padding: "10px"}}>
+            <Col xs={7} className="m-0" style={{padding: "0px 10px 0px 0px"}}>
+              <div className="m-0 p-0 white" style={{height: '100%', display: 'flex'}}>
+                <MyChart/>
+              </div>
+            </Col>
+            <Col xs={5} className="m-0" style={{padding: "0px 0px 0px 10px"}}>
+              <div className="m-0 p-0 white" style={{height: '100%', display: 'flex'}}>
+              </div>
+            </Col>
+          </Row>
             
         </Container>
     );
