@@ -13,6 +13,10 @@ import TutorsPage from "../pages/parents/TutorsPage";
 import ContactPage from "../pages/parents/ContactPage";
 import PaymentPage from "../pages/parents/PaymentPage";
 import HistoryPage from "../pages/parents/HistoryPage";
+import TutorHome from "../pages/tutor/TutorHome";
+import TutorInfor from "../pages/tutor/TutorInfor";
+import TutorContact from "../pages/tutor/TutorContact";
+import TutorClass from "../pages/tutor/TutorClass";
 
 function WebRouter() {
   return (
@@ -44,7 +48,15 @@ function WebRouter() {
         <Route path="parents/history" element={<HistoryPage />} />
         <Route path="parents/login" element={<LoginPage />} />
         <Route path="parents/register" element={<RegisterPage />} />
+        
         {/* end parents router */}
+
+
+        {/*tutors router*/}
+        <Route path="tutors" element={<TutorHome />} />
+        <Route path="tutors/infor" element={<TutorInfor />} />
+        <Route path="tutors/contact" element={<TutorContact />} />
+        <Route path="tutors/class" element={<TutorClass />} />
       </Routes>
     </BrowserRouter>
   );
