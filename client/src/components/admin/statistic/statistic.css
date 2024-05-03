@@ -8,3 +8,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.stat-block:hover {
+    background-color: #ffa148;
+}
+
+.stat-block.no-hover:hover {
+    background-color: white;
+    cursor: default;
+}

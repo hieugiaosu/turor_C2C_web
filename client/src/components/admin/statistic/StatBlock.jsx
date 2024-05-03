@@ -2,10 +2,17 @@ import { Col, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './statistic.css'
 
-export default function StatBlock({ icon, color, value, description }) {
+export default function StatBlock({ id, icon, color, value, description, handleChooseData }) {
     if (!color) color = '#FF0000';
+    if (!handleChooseData)
+    {
+        //remove hover of stat-block
+        
+    }
     return (
-        <Col className="stat-block">
+        <Col className={`stat-block ${!handleChooseData ? 'no-hover' : ''}`} onClick={() => {
+                handleChooseData && handleChooseData(id, description)
+            }}>
             <Container className="m-1 p-1 d-flex"
                 style={{
                     alignItems: 'center', justifyContent: 'center',
