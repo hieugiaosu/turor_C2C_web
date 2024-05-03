@@ -41,7 +41,7 @@ function UserBlock({photo, onClick, name, lastMessage, isActive})
 
 }
 
-export default function UserListBlock({userList, handleChooseFriend}) {
+export default function UserListBlock({userList, handleChooseFriend, handleFilterUser}) {
     /*
     props: {
         userList: [{
@@ -81,8 +81,11 @@ export default function UserListBlock({userList, handleChooseFriend}) {
             </Row>
             <Row className='search'>
                 <InputGroup className='padding-0'>
-                <Col xs={2} className='padding-0'><Button className='search-button'><FaSearch /></Button></Col>
-                <Col xs={10} className='padding-0'><Form.Control className='search-box' type="search" placeholder="Search" /></Col>  
+                <Col xs={2} className='padding-0'><Button className='search-button' onClick={() => {
+                        const inputValue = document.querySelector('.search-box').value
+                        handleFilterUser(inputValue)
+                }}><FaSearch /></Button></Col>
+                    <Col xs={10} className='padding-0'><Form.Control className='search-box' type="search" placeholder="Search" /></Col>  
                 </InputGroup>
             </Row>
             <div style={{ overflowY: 'auto', maxHeight: 'calc(100% - 75px - 50px - 20px)' }}> {/*100% - user-list-height - search-height - margin-of-search */}

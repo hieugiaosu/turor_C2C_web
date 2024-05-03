@@ -239,9 +239,23 @@ sendMessage
 
 */
 
+function updateRawDataToLocalStorage()
+{
+    localStorage.setItem('rawMessageData', JSON.stringify(rawMessageData));
+}
+
+function loadDataFromLocalStorage()
+{
+    const data = localStorage.getItem('rawMessageData');
+    if (data) {
+        rawMessageData = JSON.parse(data);
+    }
+}
+
 export async function getMessagesWithOther(otherID)
 {
-    // wait 0.5s 
+    // wait 0.05s 
+    loadDataFromLocalStorage()
     await new Promise(r => setTimeout(r, 50));
 
     // fetch data with user token and otherID, blah blah
@@ -251,16 +265,18 @@ export async function getMessagesWithOther(otherID)
 
 export async function getUsersMessageWith() {
     // load something
-    // wait 0.5s  
-    await new Promise(r => setTimeout(r, 500));
+    // wait 0.05s  
+    loadDataFromLocalStorage()
+    await new Promise(r => setTimeout(r, 50));
 
-    return rawMessageData.data.map(user => {
+    let usersMessageWithData =  rawMessageData.data.map(user => {
         let content = "";
         let timestamp = "";
         let isSent = false;
-        let messages = user.messages.filter(message => !message.isSent);
+        let messages = user.messages;
         if (messages.length > 0) {
-            content = messages[messages.length - 1].content;
+            content = messages[messages.length - 1].isSent ?
+                'You: ' + messages[messages.length - 1].content : messages[messages.length - 1].content;
             timestamp = messages[messages.length - 1].timestamp;
             isSent = messages[messages.length - 1].isSent;
         }
@@ -276,6 +292,18 @@ export async function getUsersMessageWith() {
             }
         }
     });
+
+    usersMessageWithData.sort((a, b) => {
+        if (a.lastMessage.timestamp < b.lastMessage.timestamp) {
+          return 1;
+        } else if (a.lastMessage.timestamp > b.lastMessage.timestamp) {
+          return -1;
+        } else {
+          return 0;
+        }
+    });
+    
+    return usersMessageWithData;
 }
 
 export async function sendMessage(otherID, content) {
@@ -290,4 +318,6 @@ export async function sendMessage(otherID, content) {
         timestamp: new Date().toISOString(),
         isSent: true
     });
+
+    updateRawDataToLocalStorage();
 }

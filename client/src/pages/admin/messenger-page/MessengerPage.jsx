@@ -9,6 +9,7 @@ import SpinnerBoard from "../../../components/admin/messenger/SpinnerBoard";
 export default function MessengerPage() {
   // eslint-disable-next-line no-unused-vars
   const [userList, setUserList] = React.useState([]);
+  const [userListFiltered, setUserListFiltered] = React.useState([]);
   const [currentMessagesData, setCurrentMessagesData] = React.useState(null);
 
   const handleChooseFriend = async (otherID) => {
@@ -23,6 +24,7 @@ export default function MessengerPage() {
     async function fetchData() {
       let usersMessageWithData = await getUsersMessageWith();
       console.log("usersMessageWithData", usersMessageWithData);
+      
       setUserList(
         usersMessageWithData
       );
@@ -35,11 +37,20 @@ export default function MessengerPage() {
     fetchData();
   }, []);
 
+  React.useEffect(() => {
+    setUserListFiltered(userList)
+  }, [userList])
+
   const handleSendMessage = async (id, content) => {
     sendMessage(id, content)
     if (!currentMessagesData) return;
+
+    let usersMessageWithData = await getUsersMessageWith();
+    setUserList(
+        usersMessageWithData
+    );
+
     const chosenFriend = await getMessagesWithOther(currentMessagesData.id);
-    
     
     const newChosenFriend = { ...chosenFriend };
     newChosenFriend.messages = [...chosenFriend.messages]
@@ -49,6 +60,11 @@ export default function MessengerPage() {
       setCurrentMessagesData(newChosenFriend);
       console.log("Update messages")
     }
+  }
+
+  const handleFilterUser = (keyword) => {
+    // filter user list by keyword
+    setUserListFiltered(userList.filter(user => user.name.toLowerCase().includes(keyword.toLowerCase())));
   }
 
   return (
@@ -61,8 +77,9 @@ export default function MessengerPage() {
             style={{ height: "100%", marginLeft: "10px", marginRight: "10px" }}
           >
             <UserListBlock
-              userList={userList}
+              userList={userListFiltered}
               handleChooseFriend={handleChooseFriend}
+              handleFilterUser = {handleFilterUser}
             />
           </Col>
           <Col
