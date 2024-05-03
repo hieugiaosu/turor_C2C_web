@@ -1,10 +1,10 @@
-
+import { Container, Col } from "react-bootstrap";
+import './statistic.css'
 
 export default function StatBlock() {
     return (
-        <div>
-            <h1>Stat Block</h1>
-            {/* Add your content here */}
-        </div>
+        <Col xs={2} className="stat-block" style={{backgroundColor: 'red'}}>
+            Stat
+        </Col>
     );
 }

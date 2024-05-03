@@ -5,6 +5,7 @@ import { Line } from 'react-chartjs-2';
 import {Row, Col} from 'react-bootstrap'
 
 import { Chart as ChartJS, registerables } from 'chart.js';
+import StatBlock from "../../../components/admin/statistic/StatBlock";
 ChartJS.register(...registerables);
 
 const MyChart = () => {
@@ -27,7 +28,11 @@ const MyChart = () => {
   });
 
   return (
-    <Container style={{width:'70%'}}>
+    <Container>
+      
+
+
+      
       <h3 className="mt-5">Line chart</h3>
       <Line data={data} options={{ responsive: true,scales: {
             x: {
@@ -42,6 +47,8 @@ const MyChart = () => {
             }
         } }} />
     </Container>
+
+    
   );
 };
 
@@ -50,6 +57,12 @@ const MyChart = () => {
 export default function StatisticPage() {
     return (
         <Container className='page'>
+          <Row className="stat-blocks">
+            <StatBlock />
+            <StatBlock />
+            <StatBlock />
+            <StatBlock />
+          </Row>
             <Container className="block-statistic blue">Stat</Container>
             <Row style={{justifyContent: 'center'}}>
                 <Col xs = {6} style={{marginLeft: '10px', marginRight: '10px', backgroundColor: 'white'}}>
