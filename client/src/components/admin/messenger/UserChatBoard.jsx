@@ -7,6 +7,7 @@ import UserAvatar from './UserAvatar';
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { sendMessage } from '../../../api/admin/admin';
 
 function UserChatInfo(props) {
     /*
@@ -37,7 +38,7 @@ function UserChatInfo(props) {
                         whiteSpace: 'nowrap'
                         }}>{props.isActive ? 'Active now' : 'Offline'}</Container>
                 </Container>
-                <Container className='padding-0' style={{width: '20%'}}>
+                <Container className='p-3' style={{width: '20%',display: 'flex', justifyContent: 'flex-end'}}>
                     <Button className='user-chat-info-button'><b>...</b></Button>
                 </Container>
             </Col>
@@ -95,7 +96,7 @@ function UserChatBox(props) {
         </Container>)
 }
 
-export default function UserChatBoard({imageSrc, name, messages, isActive}) {
+export default function UserChatBoard({id, imageSrc, name, messages, isActive, handleSendMessage}) {
     /*
     props: {
         imageSrc: string
@@ -122,8 +123,13 @@ export default function UserChatBoard({imageSrc, name, messages, isActive}) {
         setInputValue(event.target.value);
     };
 
+
+
     const handleSendClick = (event) => {
         event.preventDefault();
+
+        handleSendMessage(id, inputValue)
+
         console.log(inputValue);
         setInputValue('');
     };
@@ -132,7 +138,7 @@ export default function UserChatBoard({imageSrc, name, messages, isActive}) {
         <Container className='user-list-block white padding-0'
         style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <UserChatInfo imageSrc={imageSrc} name={name} isActive={isActive} /> 
-            <div ref={scrollRef} style={{ overflowY: 'auto', flexGrow: 1 }}>
+            <div ref={scrollRef} style={{ overflowY: 'auto', flexGrow: 1, height: 100 }}>
                 {
                     messages?.map((message, index) => {
                         if (message.isSent)
@@ -148,8 +154,8 @@ export default function UserChatBoard({imageSrc, name, messages, isActive}) {
                     <InputGroup className='user-chat-group'>
                         <Form.Control className='user-chat-group-input' type='text' placeholder='Type a message'
                         value={inputValue} onChange={handleInputChange}/>
-                        <button className='user-chat-group-button' onClick={handleSendClick}>Send
-                            <FontAwesomeIcon icon={faPaperPlane} style={{marginLeft:'15px'}} /></button>
+                        <button className='user-chat-group-button p-2' onClick={handleSendClick}>Send
+                            <FontAwesomeIcon icon={faPaperPlane} style={{marginLeft:'10px'}} /></button>
                     </InputGroup>
                 </Form>
 

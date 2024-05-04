@@ -1,4 +1,4 @@
-const rawMessageData = {
+let rawMessageData = {
     "data": [{
         "id": 1,
         "name": "John Doe",
@@ -119,7 +119,11 @@ const rawMessageData = {
         "name": "Michael Wilson",
         "photo": "https://randomuser.me/api/portraits/men/5.jpg",
         "isActive": true,
-        "messages": []
+        "messages": [{
+                "content": "Good night",
+                "timestamp": "2024-04-19T09:05:00Z",
+                "isSent": false
+            }]
     }, {
         "id": 6,
         "name": "Jack Johnson",
@@ -168,7 +172,152 @@ const rawMessageData = {
     ]
 }
 
-export function getMessages() {
-    // fetch data with user token, blah blah
-    return rawMessageData.data;
+// Base Table
+
+/*
+CREATE TABLE TinNhan(
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+	ThoiGian DATETIME,
+    NoiDung VARCHAR(255),
+    NguoiGui VARCHAR(50),
+    NguoiNhan VARCHAR(50)
+);
+
+Load message from 2 user with user token
+
+bla bla ...
+
+
+
+getMessagesWithOther(otherID)
+example json data:
+{
+    "id": 1,
+    "name": "John Doe",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isActive": true,
+    "messages": [
+        {
+            "content": "Hello, how are you?",
+            "timestamp": "2024-04-19T12:00:00Z",
+            "isSent": true
+        },
+    ]
+}
+
+getUsersMessageWith()
+[{
+    "id": 1,
+    "name": "John Doe",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isActive": true,
+    "lastMessage": {
+        "content": "Hello, how are you?",
+        "timestamp": "2024-04-19T12:00:00Z",
+        "isSent": true
+    }
+}, {
+    "id": 2,
+    "name": "John Doe 2",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isActive": true,
+    "lastMessage": {
+        "content": "Hello, how are you?",
+        "timestamp": "2024-04-19T12:00:00Z",
+        "isSent": true
+    }
+}]
+
+sendMessage
+{
+    "id": 1,
+    "content": "Hello, how are you?",
+    "timestamp": "2024-04-19T12:00:00Z",
+}
+
+
+
+*/
+
+function updateRawDataToLocalStorage()
+{
+    localStorage.setItem('rawMessageData', JSON.stringify(rawMessageData));
+}
+
+function loadDataFromLocalStorage()
+{
+    const data = localStorage.getItem('rawMessageData');
+    if (data) {
+        rawMessageData = JSON.parse(data);
+    }
+}
+
+export async function getMessagesWithOther(otherID)
+{
+    // wait 0.05s 
+    loadDataFromLocalStorage()
+    await new Promise(r => setTimeout(r, 50));
+
+    // fetch data with user token and otherID, blah blah
+    const result = rawMessageData.data.find(user => user.id === otherID);
+    return result;
+}
+
+export async function getUsersMessageWith() {
+    // load something
+    // wait 0.05s  
+    loadDataFromLocalStorage()
+    await new Promise(r => setTimeout(r, 50));
+
+    let usersMessageWithData =  rawMessageData.data.map(user => {
+        let content = "";
+        let timestamp = "";
+        let isSent = false;
+        let messages = user.messages;
+        if (messages.length > 0) {
+            content = messages[messages.length - 1].isSent ?
+                'You: ' + messages[messages.length - 1].content : messages[messages.length - 1].content;
+            timestamp = messages[messages.length - 1].timestamp;
+            isSent = messages[messages.length - 1].isSent;
+        }
+        return {
+            id: user.id,
+            name: user.name,
+            photo: user.photo,
+            isActive: user.isActive,
+            lastMessage: {
+                content: content,
+                timestamp: timestamp,
+                isSent: isSent
+            }
+        }
+    });
+
+    usersMessageWithData.sort((a, b) => {
+        if (a.lastMessage.timestamp < b.lastMessage.timestamp) {
+          return 1;
+        } else if (a.lastMessage.timestamp > b.lastMessage.timestamp) {
+          return -1;
+        } else {
+          return 0;
+        }
+    });
+    
+    return usersMessageWithData;
+}
+
+export async function sendMessage(otherID, content) {
+    //
+    // send message to otherID with content
+    // call api
+    // wait 0.5s
+    await new Promise(r => setTimeout(r, 50));
+    
+    rawMessageData.data.find(user => user.id === otherID).messages.push({
+        content: content,
+        timestamp: new Date().toISOString(),
+        isSent: true
+    });
+
+    updateRawDataToLocalStorage();
 }

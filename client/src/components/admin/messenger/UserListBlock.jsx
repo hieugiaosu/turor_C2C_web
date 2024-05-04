@@ -4,36 +4,36 @@ import { FaSearch } from 'react-icons/fa';
 import './user-list.css'
 import UserAvatar from './UserAvatar';
 
-function UserBlock(props) 
+function UserBlock({photo, onClick, name, lastMessage, isActive}) 
 {
     /*
     props: {
-        imageSrc: string
+        photo: string
         name: string
         lastMessage: string
         isActive: boolean
     }
     */
     return (
-        <Row className='user-block' onClick={()=>props.onClick()}>
-            <Col xs={3} style={{
+        <Row className='user-block' onClick={()=>onClick()}>
+            <Col xs={4} style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                     }}>
-                <UserAvatar imageSrc={props.imageSrc} isActive={props.isActive} />
+                <UserAvatar imageSrc={photo} isActive={isActive} />
             </Col>
-            <Col xs={9} className='padding-0'  style={{
+            <Col xs={8} className='padding-0'  style={{
                         display: 'flex', alignItems: 'center'
                         }}>
                 <Container className='padding-0'>
                     <Container className='user-avatar-block padding-0' style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         fontSize: '1.25rem', fontWeight: 'bold'
-                        }}>{props.name}</Container>
+                        }}>{name}</Container>
                     <Container className='user-avatar-block padding-0' style={{
                         display: 'flex', justifyContent: 'flex-start',
                         fontSize: '1rem', color: 'gray', overflow: 'hidden', textOverflow: 'ellipsis',
                         whiteSpace: 'nowrap'
-                        }}>{props.lastMessage}</Container>
+                        }}>{lastMessage}</Container>
                 </Container>
             </Col>
         </Row>
@@ -41,14 +41,19 @@ function UserBlock(props)
 
 }
 
-export default function UserListBlock({userList, handleChooseFriend}) {
+export default function UserListBlock({userList, handleChooseFriend, handleFilterUser}) {
     /*
     props: {
         userList: [{
-            imageSrc: string
+            id: string
             name: string
-            lastMessage: string
+            photo: string
             isActive: boolean
+            lastMessage: {
+                content: string
+                timestamp: string
+                isSent: boolean
+            }
         }]
     }
     */
@@ -76,8 +81,11 @@ export default function UserListBlock({userList, handleChooseFriend}) {
             </Row>
             <Row className='search'>
                 <InputGroup className='padding-0'>
-                <Col xs={2} className='padding-0'><Button className='search-button'><FaSearch /></Button></Col>
-                <Col xs={10} className='padding-0'><Form.Control className='search-box' type="search" placeholder="Search" /></Col>  
+                <Col xs={2} className='padding-0'><Button className='search-button' onClick={() => {
+                        const inputValue = document.querySelector('.search-box').value
+                        handleFilterUser(inputValue)
+                }}><FaSearch /></Button></Col>
+                    <Col xs={10} className='padding-0'><Form.Control className='search-box' type="search" placeholder="Search" /></Col>  
                 </InputGroup>
             </Row>
             <div style={{ overflowY: 'auto', maxHeight: 'calc(100% - 75px - 50px - 20px)' }}> {/*100% - user-list-height - search-height - margin-of-search */}
@@ -85,10 +93,10 @@ export default function UserListBlock({userList, handleChooseFriend}) {
                userListReact.map((user, index) => {
                     return (
                         <UserBlock key={index} name={user.name}
-                            lastMessage={user.lastMessage}
-                            imageSrc={user.imageSrc}
+                            lastMessage={user.lastMessage.content}
+                            photo={user.photo}
                             isActive={user.isActive}
-                            onClick={() => handleChooseFriend(user.name)}
+                            onClick={() => handleChooseFriend(user.id)}
                         />
                     )
                 })
