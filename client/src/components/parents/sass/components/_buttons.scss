@@ -282,7 +282,7 @@ select {
 .custom-select {
   position: relative;
   display: inline-block;
-  font: 13px/1.5 'Roboto', sans-serif;
+  font: 13px/1.5 "Roboto", sans-serif;
 }
 
 .custom-select-trigger {
@@ -304,7 +304,7 @@ select {
 .custom-select-trigger:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   top: 50%;
@@ -536,7 +536,7 @@ button.default-btn.btn-large {
   padding: 0 32px;
   font-size: 18px;
   line-height: 56px;
-  @include mq('phone-wide', max) {
+  @include mq("phone-wide", max) {
     padding: 0 25px;
     font-size: 16px;
     line-height: 50px;

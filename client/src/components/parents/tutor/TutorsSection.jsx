@@ -9,62 +9,62 @@ const TutorsSection = () => {
       imgSrc:
         "https://media.licdn.com/dms/image/D5603AQHrkBt0FZTR3w/profile-displayphoto-shrink_800_800/0/1683948337409?e=2147483647&v=beta&t=LnHIOp5P29MrmdCMgKqBHf5mURxlBoGfa232zy5bn7I",
       rating: "5.0",
-      students: "25",
+      students: "265.7K",
     },
     {
       name: "Đặng Quang Vinh",
       role: "Báo bài Tiểu học",
       imgSrc:
-        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/276141419_1609475789409616_3802600220044426159_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7cJv8HHsjMoQ7kNvgEiVtX_&_nc_ht=scontent-hkg4-1.xx&oh=00_AfBqIfYK_rfbKmEgScozyuAdxPt6MNYWGryOSMTd8tfu0Q&oe=66381123",
+        "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/276141419_1609475789409616_3802600220044426159_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=PFq_vwPxNgwQ7kNvgFGyQvs&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYBdBqerLu-7eC_rk2ILBUjTeaEjWz9WtZRfv9Rp3R6zQw&oe=6665C523",
       rating: "5.0",
-      students: "26",
+      students: "265.7K",
     },
     {
       name: "Nguyễn Phan Hoàng Phúc",
       role: "Văn Anh THCS",
       imgSrc:
-        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/355167881_1385377535340453_9167848635188842104_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=qec81lo3-AgQ7kNvgGwtX95&_nc_ht=scontent-hkg4-1.xx&oh=00_AfACeDETs_kwPkFzRPayl49UtY8Z4_1qlU9FUjPOzy5dcA&oe=6638353B",
+        "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/355167881_1385377535340453_9167848635188842104_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=I7JOf2U-qR0Q7kNvgEzw5du&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYAEVL2aYA2FfDAlCxymULQW8o7pxyWBH161veFiiXwVPg&oe=6665B0FB",
       rating: "5.0",
-      students: "45",
+      students: "265.7K",
     },
     {
       name: "Huỳnh Thái Học",
       role: "Toán Lý Hóa THPT",
       imgSrc:
-        "https://scontent-hkg1-2.xx.fbcdn.net/v/t1.6435-9/129964326_103233228328909_2416127940009701180_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=g9eMhlF2qiMAb5SIxB6&_nc_oc=AdiiJYCa6z7KI6-DynVYg_RkDJikedIw9tbcTw0T9pN1Rsckq6KBTofndw-KxtenDcBxnuCMA2tbeQy_DriCqfXx&_nc_ht=scontent-hkg1-2.xx&oh=00_AfAHalTPiZ3f0OLWg5TvWmvzVhkA2s-li-j7d5i-IAACpA&oe=66501176",
+        "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/267327312_314178423901054_2956773516621505518_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=tt54Hi-ubmMQ7kNvgEnaFhR&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYA44__3qUQG-mt6Qjbjs-PunQc_GqhTPhf360wreboGRA&oe=6665BA2D",
       rating: "5.0",
-      students: "23",
+      students: "265.7K",
     },
     {
       name: "Nguyễn Châu Long",
       role: "ĐGNL ĐHQG TP.HCM",
       imgSrc:
-        "https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/199515876_1147737032374233_1592432419717420768_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nb6R67GLKxsAb7MPjtj&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAwg4UB9xPgJJsSwjmTaDcWncXWMoXRZAl59wKmRcmfjQ&oe=66500640",
+        "https://scontent.fsgn21-1.fna.fbcdn.net/v/t1.6435-9/199515876_1147737032374233_1592432419717420768_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=32qdDL2QSRMQ7kNvgHbDV9a&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYCA2OAbDmH5mUQGxBQEuJ72D4j-JQ0Zp01cKsmImV3uDw&oe=66876540",
       rating: "5.0",
-      students: "23",
+      students: "265.7K",
     },
     {
       name: "Phạm Phú Khang",
       role: "Văn Sử Địa THPT",
       imgSrc:
-        "https://scontent-hkg1-2.xx.fbcdn.net/v/t1.6435-9/56420942_447009999372769_4934487368028651520_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lp9ZqIC3BhYQ7kNvgHxT-RO&_nc_ht=scontent-hkg1-2.xx&oh=00_AfATSVfK6Ctf34sha62ijJmIvTPDfFUGgDVikxH6Cs8eiw&oe=6659A053",
+        "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/266478371_1097661247640971_8382659127129678629_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ovDzDKURlvAQ7kNvgFK4Pla&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYDLYyB6V_MWgci8gVOmpvg7kuThsoRv7CF_MaAnf01YbQ&oe=6665DC2A",
       rating: "5.0",
-      students: "34",
+      students: "265.7K",
     },
     {
       name: "Hoàng Đức Nguyên",
       role: "Ôn HSG THCS",
       imgSrc:
-        "https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/277354963_678836309986422_7620062949241528348_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KE8a6gHmr04Q7kNvgERbTjU&_nc_ht=scontent-hkg1-2.xx&oh=00_AfD-fv8-hzKmd-On4Lsm4AccqCs1tJlq7psMNrtJtlZu7Q&oe=66380607",
+        "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/277354963_678836309986422_7620062949241528348_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JHgdImEKqTMQ7kNvgHtOGym&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYDPPDDHCBMPgA9--udAHrdN9z_Ztd2JM2AVqNvbrpuzWw&oe=6665BA07",
       rating: "5.0",
-      students: "45",
+      students: "265.7K",
     },
     {
       name: "Thái Bảo Long",
       role: "KHTN THCS",
       imgSrc: "https://i.postimg.cc/dVmDgvCD/image.png",
       rating: "5.0",
-      students: "34",
+      students: "265.7K",
     },
     {
       name: "Lê Anh Huy",
@@ -72,7 +72,7 @@ const TutorsSection = () => {
       imgSrc:
         "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
       rating: "5.0",
-      students: "32",
+      students: "265.7K",
     },
     {
       name: "Lã Nguyễn Gia Hy",
@@ -80,7 +80,7 @@ const TutorsSection = () => {
       imgSrc:
         "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
       rating: "5.0",
-      students: "56",
+      students: "265.7K",
     },
   ];
   return (

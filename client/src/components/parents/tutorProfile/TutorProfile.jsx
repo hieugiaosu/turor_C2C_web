@@ -6,7 +6,7 @@ const TutorProfile = (props) => {
     intro:
       "My name is Phạm Thế Hiểu, and I am a junior at Ho Chi Minh City University of Technology (HCMUT), studying computer science in the honor program. My interests primarily lie in the fields of Artificial Intelligence, Software Engineering, and Web Development. I am eager to expand my knowledge in these areas.",
     image:
-      "https://media.licdn.com/dms/image/D5635AQFRuIvtJaIQcg/profile-framedphoto-shrink_800_800/0/1712910607514?e=1715108400&v=beta&t=F_mixyfCrfwfhN9F-VEyL2dhdc_swZkN3njO18sXZLI",
+      "https://media.licdn.com/dms/image/D5603AQHrkBt0FZTR3w/profile-displayphoto-shrink_800_800/0/1683948337409?e=2147483647&v=beta&t=LnHIOp5P29MrmdCMgKqBHf5mURxlBoGfa232zy5bn7I",
     courses: "Luyện thi Đại học - Môn Toán Lý Hóa",
     link: "https://www.linkedin.com/in/thehieu1402",
 
