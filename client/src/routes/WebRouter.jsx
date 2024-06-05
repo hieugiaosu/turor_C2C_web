@@ -18,7 +18,10 @@ import TutorInfor from "../pages/tutor/TutorInfor";
 import TutorContact from "../pages/tutor/TutorContact";
 import TutorClass from "../pages/tutor/TutorClass";
 import TutorProfile from "../components/parents/tutorProfile/TutorProfile";
+import PaymentPageTutor from "../pages/tutor/PaymentPage";
 import CourseProfile from "../components/parents/courses/CourseProfile";
+import Login from "../pages/tutor/TutorLogin";
+import TutorRegister from "../pages/tutor/TutorRegister";
 
 function WebRouter() {
   return (
@@ -60,6 +63,9 @@ function WebRouter() {
         <Route path="tutors/infor" element={<TutorInfor />} />
         <Route path="tutors/contact" element={<TutorContact />} />
         <Route path="tutors/class" element={<TutorClass />} />
+        <Route path="tutors/payment" element={<PaymentPageTutor />} />
+        <Route path="tutors/login" element={<Login />} />
+        <Route path="tutors/register" element={<TutorRegister />} />
       </Routes>
     </BrowserRouter>
   );
