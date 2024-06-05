@@ -130,7 +130,7 @@ const CourseSection = () => {
                   <div className="course-item-5">
                     <div className="course-item-5-card">
                       <a
-                        href="single-course.html"
+                        href="/parents/course-profile"
                         className="course-item-5-card-img"
                       >
                         <img src={item.imgSrc} alt="" />
@@ -144,7 +144,7 @@ const CourseSection = () => {
                         </p>
                       </div>
                       <a
-                        href="course-single.html"
+                        href="/parents/course-profile"
                         className="course-item-5-card-head"
                       >
                         {item.title}

@@ -15,7 +15,10 @@ const EntrySection = () => {
                   với những gia sư có kinh nghiệm, đầy đủ kiến thức và đam mê
                   giảng dạy.
                 </p>
-                <a className="default-btn btn-large bg-white icon-btn" href="#">
+                <a
+                  className="default-btn btn-large bg-white icon-btn"
+                  href="/parents/contact"
+                >
                   Đăng ký ngay
                   <svg
                     width={24}

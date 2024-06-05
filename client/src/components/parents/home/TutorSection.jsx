@@ -13,7 +13,7 @@ const TutorSection = () => {
       name: "Đặng Quang Vinh",
       role: "Báo bài Tiểu học",
       imgSrc:
-        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-1/276141419_1609475789409616_3802600220044426159_n.jpg?stp=dst-jpg_s480x480&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MCDZGTzZuPwAb5vasd4&_nc_ht=scontent-hkg4-1.xx&oh=00_AfAYlWbUoi59P3Vt9eYtsn1dokLXgyAk9y343y9U46soLA&oe=662E5A21",
+        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/276141419_1609475789409616_3802600220044426159_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7cJv8HHsjMoQ7kNvgEiVtX_&_nc_ht=scontent-hkg4-1.xx&oh=00_AfBqIfYK_rfbKmEgScozyuAdxPt6MNYWGryOSMTd8tfu0Q&oe=66381123",
       rating: "5.0",
       students: "265.7K",
     },
@@ -21,7 +21,7 @@ const TutorSection = () => {
       name: "Nguyễn Phan Hoàng Phúc",
       role: "Văn Anh THCS",
       imgSrc:
-        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/355167881_1385377535340453_9167848635188842104_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=LmH_kYVPL1MAb56mFuq&_nc_ht=scontent-hkg4-1.xx&oh=00_AfAOR-eNFlWwQ_e28bfp4BsbaekOMHFjMBxXJkggT3Xx4Q&oe=662E51FB",
+        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/355167881_1385377535340453_9167848635188842104_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=qec81lo3-AgQ7kNvgGwtX95&_nc_ht=scontent-hkg4-1.xx&oh=00_AfACeDETs_kwPkFzRPayl49UtY8Z4_1qlU9FUjPOzy5dcA&oe=6638353B",
       rating: "5.0",
       students: "265.7K",
     },
@@ -45,7 +45,7 @@ const TutorSection = () => {
       name: "Phạm Phú Khang",
       role: "Văn Sử Địa THPT",
       imgSrc:
-        "https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/266478371_1097661247640971_8382659127129678629_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=sgckJZPlwZgAb7mLmqU&_nc_ht=scontent-hkg1-1.xx&oh=00_AfBLyzVNHj4j0IBxptWKnAahHHLOmwSC7ixYHuEHExpnhQ&oe=662E7D2A",
+        "https://scontent-hkg1-2.xx.fbcdn.net/v/t1.6435-9/56420942_447009999372769_4934487368028651520_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lp9ZqIC3BhYQ7kNvgHxT-RO&_nc_ht=scontent-hkg1-2.xx&oh=00_AfATSVfK6Ctf34sha62ijJmIvTPDfFUGgDVikxH6Cs8eiw&oe=6659A053",
       rating: "5.0",
       students: "265.7K",
     },
@@ -53,15 +53,14 @@ const TutorSection = () => {
       name: "Hoàng Đức Nguyên",
       role: "Ôn HSG THCS",
       imgSrc:
-        "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/420777508_1074088943794488_4879960294067233745_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IWApujRUFfgAb5Z6HiM&_nc_ht=scontent-hkg4-1.xx&oh=00_AfCfw5OkMZdix-xXExpL_AcDDwyXpq0w4eVheGTVx7ycDg&oe=662E7E52",
+        "https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/277354963_678836309986422_7620062949241528348_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KE8a6gHmr04Q7kNvgERbTjU&_nc_ht=scontent-hkg1-2.xx&oh=00_AfD-fv8-hzKmd-On4Lsm4AccqCs1tJlq7psMNrtJtlZu7Q&oe=66380607",
       rating: "5.0",
       students: "265.7K",
     },
     {
       name: "Thái Bảo Long",
       role: "KHTN THCS",
-      imgSrc:
-        "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+      imgSrc: "https://i.postimg.cc/dVmDgvCD/image.png",
       rating: "5.0",
       students: "265.7K",
     },
@@ -100,7 +99,7 @@ const TutorSection = () => {
                       <div className="course-item-5">
                         <div className="course-item-5-card">
                           <a
-                            href="instructor-profile.html"
+                            href="/parents/tutor-profile"
                             className="course-item-5-card-img team-thumb"
                           >
                             <img src={item.imgSrc} alt="" />
@@ -139,7 +138,7 @@ const TutorSection = () => {
               <p>
                 Hãy lựa chọn giảng viên phù hợp để con bạn có một hành trình học
                 tập thành công!
-                <a href="become-instructor.html">
+                <a href="parents/tutors">
                   Tìm kiếm gia sư ngay!
                   <svg
                     width={24}

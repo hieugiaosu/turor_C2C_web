@@ -17,6 +17,11 @@ import TutorHome from "../pages/tutor/TutorHome";
 import TutorInfor from "../pages/tutor/TutorInfor";
 import TutorContact from "../pages/tutor/TutorContact";
 import TutorClass from "../pages/tutor/TutorClass";
+import TutorProfile from "../components/parents/tutorProfile/TutorProfile";
+import PaymentPageTutor from "../pages/tutor/PaymentPage";
+import CourseProfile from "../components/parents/courses/CourseProfile";
+import Login from "../pages/tutor/TutorLogin";
+import TutorRegister from "../pages/tutor/TutorRegister";
 
 function WebRouter() {
   return (
@@ -34,8 +39,8 @@ function WebRouter() {
             element={<UserMangementAdmin></UserMangementAdmin>}
           ></Route>
           <Route path="notifications" element={<></>}></Route>
-          <Route path="inbox" element={<MessengerPage/>}></Route>
-          <Route path="earning" element={<StatisticPage/>}></Route>
+          <Route path="inbox" element={<MessengerPage />}></Route>
+          <Route path="earning" element={<StatisticPage />}></Route>
           <Route path="settings" element={<></>}></Route>
           <Route index element={<></>} />
         </Route>
@@ -43,20 +48,24 @@ function WebRouter() {
         <Route path="parents" element={<HomePage />} />
         <Route path="parents/courses" element={<CoursesPage />} />
         <Route path="parents/tutors" element={<TutorsPage />} />
+        <Route path="parents/tutor-profile" element={<TutorProfile />} />
+        <Route path="parents/course-profile" element={<CourseProfile />} />
         <Route path="parents/contact" element={<ContactPage />} />
         <Route path="parents/payment" element={<PaymentPage />} />
         <Route path="parents/history" element={<HistoryPage />} />
         <Route path="parents/login" element={<LoginPage />} />
         <Route path="parents/register" element={<RegisterPage />} />
-        
-        {/* end parents router */}
 
+        {/* end parents router */}
 
         {/*tutors router*/}
         <Route path="tutors" element={<TutorHome />} />
         <Route path="tutors/infor" element={<TutorInfor />} />
         <Route path="tutors/contact" element={<TutorContact />} />
         <Route path="tutors/class" element={<TutorClass />} />
+        <Route path="tutors/payment" element={<PaymentPageTutor />} />
+        <Route path="tutors/login" element={<Login />} />
+        <Route path="tutors/register" element={<TutorRegister />} />
       </Routes>
     </BrowserRouter>
   );
