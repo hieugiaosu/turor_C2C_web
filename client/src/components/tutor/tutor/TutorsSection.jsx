@@ -9,7 +9,10 @@ const TutorsSection = () => {
           <div className="course-item-4">
             <div className="course-item-5-card">
               <a href="single-course.html" className="course-item-5-card-img">
-                <img src="img/toan7.jpg" alt="" />
+                <img
+                  src="https://sarah.edu.vn/wp-content/uploads/2022/05/Cau-Do-Toan-Hoc0-01.jpg"
+                  alt=""
+                />
               </a>
               <div className="course-item-5-card-info">
                 <button className="course-item-5-card-info-tag">Toán 7</button>
@@ -45,7 +48,10 @@ const TutorsSection = () => {
           <div className="course-item-4">
             <div className="course-item-5-card">
               <a href="single-course.html" className="course-item-5-card-img">
-                <img src="assets/images/course2.jpg" alt="" />
+                <img
+                  src="https://swinburne-vn.edu.vn/wp-content/uploads/chuong-trinh-dao-tao-cua-truong-quoc-te-khac-biet-nhu-the-nao-7.jpg"
+                  alt=""
+                />
               </a>
               <div className="course-item-5-card-info">
                 <button className="course-item-5-card-info-tag tag-color2">
@@ -83,7 +89,10 @@ const TutorsSection = () => {
           <div className="course-item-4">
             <div className="course-item-5-card">
               <a href="single-course.html" className="course-item-5-card-img">
-                <img src="assets/images/course3.jpg" alt="" />
+                <img
+                  src="https://old.kienguru.vn/hs-fs/hubfs/vat-ly-12-bai-1-1-1.jpg?width=960&name=vat-ly-12-bai-1-1-1.jpg"
+                  alt=""
+                />
               </a>
               <div className="course-item-5-card-info">
                 <button className="course-item-5-card-info-tag tag-color3">
@@ -121,7 +130,10 @@ const TutorsSection = () => {
           <div className="course-item-4">
             <div className="course-item-5-card">
               <a href="single-course.html" className="course-item-5-card-img">
-                <img src="assets/images/course4.jpg" alt="" />
+                <img
+                  src="https://www.uit.edu.vn/sites/vi/files/uploads/images/thumbs/202205/xstk.png"
+                  alt=""
+                />
               </a>
               <div className="course-item-5-card-info">
                 <button className="course-item-5-card-info-tag tag-color2">
@@ -159,7 +171,10 @@ const TutorsSection = () => {
           <div className="course-item-4">
             <div className="course-item-5-card">
               <a href="single-course.html" className="course-item-5-card-img">
-                <img src="assets/images/course1.jpg" alt="" />
+                <img
+                  src="https://bcp.cdnchinhphu.vn/334894974524682240/2022/10/7/103006707-16651128844861034773449.jpg"
+                  alt=""
+                />
               </a>
               <div className="course-item-5-card-info">
                 <button className="course-item-5-card-info-tag">Báo bài</button>
@@ -195,7 +210,10 @@ const TutorsSection = () => {
           <div className="course-item-4">
             <div className="course-item-5-card">
               <a href="single-course.html" className="course-item-5-card-img">
-                <img src="assets/images/course2.jpg" alt="" />
+                <img
+                  src="https://tictak.com.vn/uploads/cache/san-pham/2022/0602/16523/tictakbook-16541442679450-380x380.jpg"
+                  alt=""
+                />
               </a>
               <div className="course-item-5-card-info">
                 <button className="course-item-5-card-info-tag tag-color2">

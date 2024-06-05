@@ -6,13 +6,13 @@ const CourseProfile = () => {
     title:
       "Học cách áp dụng phương pháp Soroban trong giải quyết bài toán, phát triển kỹ năng toán học và rèn luyện tư duy logic cho học sinh tiểu học.",
     teacher: "Phạm Thế Hiểu",
-    price: "1.200.000 VND",
-    priceBefore: "2.000.000 VND",
+    price: "850.000 VND",
+    priceBefore: "1.800.000 VND",
     discount: "40%",
     imgTeacher1:
       "https://media.licdn.com/dms/image/D5603AQHrkBt0FZTR3w/profile-displayphoto-shrink_800_800/0/1683948337409?e=2147483647&v=beta&t=LnHIOp5P29MrmdCMgKqBHf5mURxlBoGfa232zy5bn7I",
     imgTeacher2:
-      "https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/277354963_678836309986422_7620062949241528348_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KE8a6gHmr04Q7kNvgERbTjU&_nc_ht=scontent-hkg1-2.xx&oh=00_AfD-fv8-hzKmd-On4Lsm4AccqCs1tJlq7psMNrtJtlZu7Q&oe=66380607",
+      "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/277354963_678836309986422_7620062949241528348_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JHgdImEKqTMQ7kNvgHtOGym&_nc_ht=scontent.fsgn21-1.fna&oh=00_AYDPPDDHCBMPgA9--udAHrdN9z_Ztd2JM2AVqNvbrpuzWw&oe=6665BA07",
     second_teacher: "Hoàng Đức Nguyên",
     desc: ` Khóa học 'Khám phá toán tư duy Soroban cho học sinh tiểu học' là một chương trình học hấp dẫn và thú vị giúp các em học sinh tiểu học khám phá và phát triển kỹ năng toán tư duy thông qua phương pháp Soroban - một phương pháp giáo dục toán học phổ biến được áp dụng rộng rãi trên thế giới. 
     
