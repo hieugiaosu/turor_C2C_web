@@ -45,14 +45,15 @@ const Authenticate = async (TenDangNhap, MatKhau) => {
     return error;
   }
 };
-const PaymentPostService = async () => {
+const PaymentPostService = async (money) => {
   const payos = new PAYOS(
     "76f689ee-34c1-41fb-a55a-851301c9bf8a",
     "a17ba6c2-e0a9-4c61-8eb4-d089c94104d1",
     "cc6588a50aa03dc242d292791a0f2ea7199ce905cd72e2e8ecb7d40533601087"
   );
+  console.log(money)
   const payment = await payos.createPaymentLink({
-    amount: 10000,
+    amount: (money || 10000),
     currency: "VND",
     description: "Thanh toán khóa học",
     orderCode: Number(String(Date.now()).slice(-6)),

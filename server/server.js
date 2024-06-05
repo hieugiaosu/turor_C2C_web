@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 // const adminAPIRouter = require("./admin-service/routes");
-// const tutorAPIRouter = require("./tutor-service/routes");
+const tutorAPIRouter = require("./tutor-service/routes");
 const parentsAPIRouter = require("./parents-service/routes");
 
 // App setup
@@ -24,7 +24,7 @@ app.use(cookieParser());
 
 // Every route should start with /api
 // app.use('/api', adminAPIRouter);
-// app.use('/api', tutorAPIRouter);
+app.use('/api/tutor', tutorAPIRouter);
 app.use("/api/parent", parentsAPIRouter);
 
 // Error handlers

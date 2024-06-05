@@ -41,7 +41,8 @@ const SignUp = async (req, res) => {
   }
 };
 const PaymentForPost = async (req, res) => {
-  const result = await PaymentPostService();
+  const money = req.body.money;
+  const result = await PaymentPostService(money);
   if (result) {
     res.status(200).json({ data: result, EC: 0 });
   } else {
